@@ -6,7 +6,8 @@ The Nasa Project will consume Nasa's public API and show a variety of stats and 
 
 Members of the project group are:
 
-Anshul Shanker
-Daniel Bulgarelli
-Gabriella Pensa
-Shahrose
+- Anshul Shanker
+- Daniel Bulgarelli
+- Gabriella Pensa
+- Kelley Merrell
+- Shahrose
