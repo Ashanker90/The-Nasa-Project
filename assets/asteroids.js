@@ -1,5 +1,8 @@
+var today = new Date();
+var start_date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
 var req = new XMLHttpRequest();
-var url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=START_DATE&end_date=END_DATE&api_key=API_KEY";
+var url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${start_date}&api_key=`;
 var api_key = "wGXhi7fLKdBmDP5PdNR5Eu3N4JOvJ9lez2UnnqwJ";
 
 req.open("GET", url + api_key);
