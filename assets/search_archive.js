@@ -1,31 +1,33 @@
-var ele = document.getElementById("submit");
-var title = document.getElementById("title").value;
+function submit() {
+  let title = document.getElementById("title").value;
+  let req = new XMLHttpRequest();
+  let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
 
-debugger;
-
-if(ele.addEventListener){
-    ele.addEventListener("submit", callback, false);
-  }
-
-function callback() {
-  console.log(title);
+  req.open("GET", url);
+  req.send();
+  
+  // debugger;
+  // let response = JSON.parse(req.responseText)
 }
 
-var req = new XMLHttpRequest();
-var title = document.getElementById("title").value;
-var url = `https://images-api.nasa.gov/search?title=${title}`;
-var api_key = "W8bRBkY5cEdSh2TrvFO58up2snPU6oZogHRJvHlT";
+// req.addEventListener("load", function(){
+// 	if(req.status == 200 && req.readyState == 4){
+//   	let response = JSON.parse(req.responseText);
+//     // document.getElementById("url_1").textContent = response.title;
+//     // document.getElementById("date").textContent = response.date;
+//     // document.getElementById("pic").src = response.hdurl;
+//     // document.getElementById("explanation").textContent = response.explanation;
+//     let index = if
+//     for()
+//   }
+// })
 
-req.open("GET", url + api_key);
-req.send();
+// if retrive_coount < 10 
+// 	i = retrive_coount
+// else
+// 	i = 10
 
-
-req.addEventListener("load", function(){
-	if(req.status == 200 && req.readyState == 4){
-  	var response = JSON.parse(req.responseText);
-    document.getElementById("title").textContent = response.title;
-    document.getElementById("date").textContent = response.date;
-    document.getElementById("pic").src = response.hdurl;
-    document.getElementById("explanation").textContent = response.explanation;
-  }
-})
+// url_i
+// description_i
+// date_i
+// title_i
