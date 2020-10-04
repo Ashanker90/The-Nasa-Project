@@ -1,9 +1,24 @@
+var ele = document.getElementById("submit");
+var title = document.getElementById("title").value;
+
+debugger;
+
+if(ele.addEventListener){
+    ele.addEventListener("submit", callback, false);
+  }
+
+function callback() {
+  console.log(title);
+}
+
 var req = new XMLHttpRequest();
-var url = "";
-var api_key = "eX1iUr6fbBWu4jibMyL56VFMEvsmdsAbldFCgTr5";
+var title = document.getElementById("title").value;
+var url = `https://images-api.nasa.gov/search?title=${title}`;
+var api_key = "W8bRBkY5cEdSh2TrvFO58up2snPU6oZogHRJvHlT";
 
 req.open("GET", url + api_key);
 req.send();
+
 
 req.addEventListener("load", function(){
 	if(req.status == 200 && req.readyState == 4){
