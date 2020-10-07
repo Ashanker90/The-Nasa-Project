@@ -9,10 +9,18 @@ req.addEventListener("load", function() {
     if (req.status == 200 && req.readyState == 4) {
         var response = JSON.parse(req.responseText);
         const sol = response.sol_keys[6];
-        document.getElementById("mars_weather_title").textContent =  response.sol_keys[6];
-        document.getElementById("temperature").textContent = response[sol].AT.av;
-        document.getElementById("atmospheric_pressure").textContent = response[sol].PRE.av;
-        document.getElementById("wind_speed").textContent = response[sol].HWS.av;
+        document.getElementById("mars-date").textContent = "SOL " + response.sol_keys[6];
+        date = new Date(response[sol].First_UTC).toDateString();
+        document.getElementById("earth-date").textContent = date;
+        document.getElementById("season").textContent = "Season: "+ response[sol].Season.toLocaleUpperCase();
+        document.getElementById("temp-high").textContent = "High: " + response[sol].AT.mx;
+        document.getElementById("temp-low").textContent = "Low: " + response[sol].AT.mn;
+        // document.getElementById("sol-col1").textContent = "Sol " + response.sol_keys[0];
+        // document.getElementById("sol-col2").textContent = "Sol " + response.sol_keys[1];
+        // document.getElementById("sol-col3").textContent = "Sol " + response.sol_keys[2];
+        // document.getElementById("sol-col4").textContent = "Sol " + response.sol_keys[3];
+        // document.getElementById("sol-col5").textContent = "Sol " + response.sol_keys[4];
+        // document.getElementById("sol-col6").textContent = "Sol " + response.sol_keys[5];
     }
 })
 

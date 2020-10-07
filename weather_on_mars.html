@@ -1,9 +1,33 @@
-<script src="assets/mars_weather.js"></script>
-<body>
-    <h1>Weather on Mars</h1>
-    <h2>Sol (Martian Days): <span id="mars_weather_title"/></h2>
-    <h3>Temperature: <span id="temperature"/></h3>
-    <h3>Atmospheric Pressure: <span id="atmospheric_pressure"/></h3>
-    <h3>Wind Speed: <span id="wind_speed"/></h3>
+<head>
+    <script src="assets/mars_weather.js"></script>
+    <link rel="stylesheet" href="assets/CSS/mars.css">
+    <body>
+        <div class="container">
+            <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/pia23492.jpg" alt="mars" style="width:100%;">
+            <div class="current-date-block">
+                <span id="mars-date"></span>
+                <br/>
+                <span id="earth-date"></span>
+            </div>
 
-</body>
+            <div class="season" id="season">
+<!--                <span id="season"></span>-->
+            </div>
+
+            <div class="temps">
+                <span id="temp-high"></span>
+                <br/>
+                <span id="temp-low"></span>
+            </div>
+
+<!--            <table class="sol-table">-->
+<!--                <th id="sol-col1"></th>-->
+<!--                <th id="sol-col2"></th>-->
+<!--                <th id="sol-col3"></th>-->
+<!--                <th id="sol-col4"></th>-->
+<!--                <th id="sol-col5"></th>-->
+<!--                <th id="sol-col6"></th>-->
+<!--            </table>-->
+        </div>
+    </body>
+</head>

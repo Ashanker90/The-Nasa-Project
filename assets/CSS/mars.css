@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'nasalizationregular';
+    src: url('fonts/nasalization-free.regular-webfont.woff2') format('woff2'),
+    url('fonts/nasalization-free.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'nasalizationregular';
+}
+.container {
+    position: relative;
+}
+.current-date-block {
+    position: absolute;
+    top: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 170%;
+    padding-left: 50px;
+    padding-right: 100px;
+    text-align: center;
+}
+.season {
+    position: absolute;
+    top: 175px;
+    background-color: transparent;
+    color: white;
+    font-size: 150%;
+    padding-left: 50px;
+    padding-right: 100px;
+    text-align: center;
+}
+.temps {
+    position: absolute;
+    top: 300px;
+    background-color: transparent;
+    color: white;
+    font-size: 150%;
+    padding-left: 50px;
+    padding-right: 100px;
+    text-align: center;
+}
+.sol-table {
+    position: absolute;
+    top: 400px;
+    column-count: auto;
+    background-color: transparent;
+    color: white;
+    font-size: 100%;
+    padding-left: 50px;
+    padding-right: 100px;
+    text-align: center;
+}
+/*.sol-row {*/
+/*    position: absolute;*/
+/*    top: 420px;*/
+/*    background-color: transparent;*/
+/*    color: white;*/
+/*    font-size: 100%;*/
+/*    padding-left: 50px;*/
+/*    padding-right: 100px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.temp_high {*/
+/*    position: absolute;*/
+/*    top: 300px;*/
+/*    background-color: transparent;*/
+/*    color: white;*/
+/*    font-size: 150%;*/
+/*    padding-left: 50px;*/
+/*    padding-right: 100px;*/
+/*    text-align: center;*/
+/*}*/
+/*.temp_low {*/
+/*    position: absolute;*/
+/*    top: 325px;*/
+/*    background-color: transparent;*/
+/*    color: white;*/
+/*    font-size: 150%;*/
+/*    padding-left: 50px;*/
+/*    padding-right: 100px;*/
+/*    text-align: center;*/
+/*}*/
