@@ -9,21 +9,19 @@ req.addEventListener("load", function() {
     if (req.status == 200 && req.readyState == 4) {
         const response = JSON.parse(req.responseText);
         const sol = response.sol_keys[6];
+        document.getElementById("header").textContent = "Weather on Mars";
         document.getElementById("mars-date").textContent = "SOL " + response.sol_keys[6];
-        date = new Date(response[sol].First_UTC).toDateString();
-        document.getElementById("earth-date").textContent = date;
-        document.getElementById("season").textContent = "Season: "+ response[sol].Season.toUpperCase();
+        date = new Date(response[sol].First_UTC);
+        var month = date.toLocaleString("en-us", { month: "short" });
+        var day = date.getDate();
+        var year = date.getFullYear();
+        var newDate = month +' ' + day +' ' + year
+        document.getElementById("earth-date").textContent = newDate;
+        document.getElementById("season").textContent = "Season: " + response[sol].Season;
         document.getElementById("temp-high").textContent = "High: " + response[sol].AT.mx;
         document.getElementById("temp-low").textContent = "Low: " + response[sol].AT.mn;
 
         buildTable(response);
-
-        // document.getElementById("sol-col1").textContent = "Sol " + response.sol_keys[0];
-        // document.getElementById("sol-col2").textContent = "Sol " + response.sol_keys[1];
-        // document.getElementById("sol-col3").textContent = "Sol " + response.sol_keys[2];
-        // document.getElementById("sol-col4").textContent = "Sol " + response.sol_keys[3];
-        // document.getElementById("sol-col5").textContent = "Sol " + response.sol_keys[4];
-        // document.getElementById("sol-col6").textContent = "Sol " + response.sol_keys[5];
     }
 })
 
@@ -38,13 +36,16 @@ function buildTable(data) {
 
     for (var i = 0; i < solKeys.length; i++) {
         const sol = solKeys[i];
-        const earthDate = new Date(data[sol].First_UTC).toDateString();
-        // Mon Oct 05 2020
+        date = new Date(data[sol].First_UTC);
+        var month = date.toLocaleString("en-us", { month: "short" });
+        var day = date.getDate();
+        var year = date.getFullYear();
+        var newDate = month +' ' + day +' ' + year
 
         solRow += "<td>" + sol + "</td>";
-        earthDateRow += "<td>" + earthDate + "</td>";
-        highTempRow += "<td>High: " + data[sol].AT.mx + "</td>";
-        lowTempRow += "<td>Low: " + data[sol].AT.mn + "</td>";
+        earthDateRow += "<td>" + newDate + "</td>";
+        highTempRow += "<td>High: " + data[sol].AT.mx + "<span>&deg;&nbsp;C</span></td>";
+        lowTempRow += "<td>Low: " + data[sol].AT.mn + "<span>&deg;&nbsp;C</span></td>";
     }
 
     table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
