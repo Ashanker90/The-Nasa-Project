@@ -20,6 +20,8 @@ req.addEventListener("load", function() {
         document.getElementById("season").textContent = "Season: " + response[sol].Season;
         document.getElementById("temp-high").textContent = "High: " + response[sol].AT.mx;
         document.getElementById("temp-low").textContent = "Low: " + response[sol].AT.mn;
+        document.getElementById("wind-direction").textContent = "Wind Direction: " + response[sol].WD.most_common.compass_point;
+        document.getElementById("wind-speed").textContent = "Wind Speed: " + response[sol].HWS.mx;
 
         buildTable(response);
     }
