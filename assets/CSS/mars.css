@@ -39,19 +39,25 @@ body {
     font-size: 150%;
     padding-left: 50px;
     padding-right: 100px;
-    text-align: center;
+    text-align: left;
 }
-.sol-table {
+.sol-table-body {
     position: absolute;
     top: 400px;
-    column-count: auto;
     background-color: transparent;
     color: white;
     font-size: 100%;
-    padding-left: 50px;
+    padding-left: 15px;
     padding-right: 100px;
     text-align: center;
+    border-spacing: 30px;
 }
+
+.sol-table-body-row {
+    width: 150px;
+    color: white;
+}
+
 /*.sol-row {*/
 /*    position: absolute;*/
 /*    top: 420px;*/
