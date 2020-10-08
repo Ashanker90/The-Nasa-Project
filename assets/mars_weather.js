@@ -7,14 +7,17 @@ req.send();
 
 req.addEventListener("load", function() {
     if (req.status == 200 && req.readyState == 4) {
-        var response = JSON.parse(req.responseText);
+        const response = JSON.parse(req.responseText);
         const sol = response.sol_keys[6];
         document.getElementById("mars-date").textContent = "SOL " + response.sol_keys[6];
         date = new Date(response[sol].First_UTC).toDateString();
         document.getElementById("earth-date").textContent = date;
-        document.getElementById("season").textContent = "Season: "+ response[sol].Season.toLocaleUpperCase();
+        document.getElementById("season").textContent = "Season: "+ response[sol].Season.toUpperCase();
         document.getElementById("temp-high").textContent = "High: " + response[sol].AT.mx;
         document.getElementById("temp-low").textContent = "Low: " + response[sol].AT.mn;
+
+        buildTable(response);
+
         // document.getElementById("sol-col1").textContent = "Sol " + response.sol_keys[0];
         // document.getElementById("sol-col2").textContent = "Sol " + response.sol_keys[1];
         // document.getElementById("sol-col3").textContent = "Sol " + response.sol_keys[2];
@@ -23,4 +26,27 @@ req.addEventListener("load", function() {
         // document.getElementById("sol-col6").textContent = "Sol " + response.sol_keys[5];
     }
 })
+
+function buildTable(data) {
+    const solKeys =  data.sol_keys;
+    var table = document.getElementById("sol-table-body");
+
+    var solRow = "<tr class='sol-table-body-row'/>";
+    var earthDateRow = "<tr class='sol-table-body-row'/>";
+    var highTempRow = "<tr class='sol-table-body-row'/>";
+    var lowTempRow = "<tr class='sol-table-body-row'/>";
+
+    for (var i = 0; i < solKeys.length; i++) {
+        const sol = solKeys[i];
+        const earthDate = new Date(data[sol].First_UTC).toDateString();
+        // Mon Oct 05 2020
+
+        solRow += "<td>" + sol + "</td>";
+        earthDateRow += "<td>" + earthDate + "</td>";
+        highTempRow += "<td>High: " + data[sol].AT.mx + "</td>";
+        lowTempRow += "<td>Low: " + data[sol].AT.mn + "</td>";
+    }
+
+    table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
+}
 
