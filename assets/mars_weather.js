@@ -32,19 +32,21 @@ function buildTable(data) {
     var table = document.getElementById("sol-table-body");
 
     var solRow = "<tr class='sol-table-body-row'/>";
-    var earthDateRow = "<tr>";
+    var earthDateRow = "<tr class='sol-table-body-row'/>";
     var highTempRow = "<tr class='sol-table-body-row'/>";
     var lowTempRow = "<tr class='sol-table-body-row'/>";
 
     for (var i = 0; i < solKeys.length; i++) {
         const sol = solKeys[i];
+        const earthDate = new Date(data[sol].First_UTC).toDateString();
+        // Mon Oct 05 2020
 
         solRow += "<td>" + sol + "</td>";
-        // earthDateRow += "";
-        // highTempRow += response[sol].AT.mx;
-        // lowTempRow += response[sol].AT.mn;
+        earthDateRow += "<td>" + earthDate + "</td>";
+        highTempRow += "<td>High: " + data[sol].AT.mx + "</td>";
+        lowTempRow += "<td>Low: " + data[sol].AT.mn + "</td>";
     }
 
-    table.innerHTML += solRow + highTempRow + lowTempRow;
+    table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
 }
 
