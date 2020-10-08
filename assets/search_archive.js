@@ -62,13 +62,11 @@ req.addEventListener("load", function () {
     clear them
 */
 function createGrid(url, description, date, title, index) {
-  console.log("function works");
   let div = document.createElement("DIV");
   let img = document.createElement("IMG");
   div.setAttribute("class", "grid-item");
   img.setAttribute("src", url);
   div.appendChild(img);
-  console.log(div);
   const gridContainer = document.getElementById("grid-container");
   gridContainer.appendChild(div);
 }
