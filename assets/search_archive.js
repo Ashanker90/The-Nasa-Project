@@ -65,11 +65,38 @@ function createGrid(url, description, date, title, index) {
   let div = document.createElement("DIV");
   let img = document.createElement("IMG");
   div.setAttribute("class", "grid-item");
+  div.setAttribute("title", title);
+  div.setAttribute("description", description);
+  div.setAttribute("date", date);
+  div.setAttribute("imgUrl", url);
+  div.setAttribute(
+    "onclick",
+    "popupImage(this.getAttribute('title'), this.getAttribute('description'), this.getAttribute('date'), this.getAttribute('imgUrl'))"
+  );
   img.setAttribute("src", url);
   div.appendChild(img);
   const gridContainer = document.getElementById("grid-container");
   gridContainer.appendChild(div);
 }
+
+function popupImage(title, description, date, url) {
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDescription = document.getElementById("modal-description");
+  const modalImg = document.getElementById("modal-img");
+  const modalDate = document.getElementById("modal-date");
+
+  modal.style.display = "block";
+
+  modalTitle.innerHTML = title;
+  modalDescription.innerHTML = description;
+  modalImg.setAttribute("src", url);
+  modalDate.innerHTML = date;
+}
+const modalImg = document.getElementById("modal-img");
+modalImg.addEventListener("click", (e) => {
+  console.log("hi");
+});
 
 // if retrive_coount < 10
 // 	i = retrive_coount
