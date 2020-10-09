@@ -93,7 +93,7 @@ function popupImage(title, description, date, url) {
   modalImg.setAttribute("src", url);
   modalDate.innerHTML = date;
 }
-const modalImg = document.getElementById("modal-img");
+const modalImg = document.getElementById("modal");
 modalImg.addEventListener("click", (e) => {
   console.log("hi");
 });
