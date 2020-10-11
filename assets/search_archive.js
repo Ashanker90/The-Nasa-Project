@@ -85,18 +85,15 @@ function popupImage(title, description, date, url) {
   const modalDescription = document.getElementById("modal-description");
   const modalImg = document.getElementById("modal-img");
   const modalDate = document.getElementById("modal-date");
+  const gridContainer = document.getElementById("grid-container");
 
-  modal.style.display = "block";
+
 
   modalTitle.innerHTML = title;
   modalDescription.innerHTML = description;
   modalImg.setAttribute("src", url);
   modalDate.innerHTML = date;
 }
-const modalImg = document.getElementById("modal");
-modalImg.addEventListener("click", (e) => {
-  console.log("hi");
-});
 
 // if retrive_coount < 10
 // 	i = retrive_coount
@@ -107,3 +104,8 @@ modalImg.addEventListener("click", (e) => {
 // description_i
 // date_i
 // title_i
+
+const modal = document.getElementById("modal");
+modal.addEventListener("click", (e) => {
+  console.log(e);
+});

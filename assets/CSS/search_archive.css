@@ -67,7 +67,7 @@
 
 /*the background of the modal*/
 #modal {
-  display: none;
+  z-index: 10;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
@@ -111,4 +111,9 @@
 
 #modal-date {
   color: white;
+}
+
+#modal-button {
+  z-index: 2;
+  float: right;
 }
