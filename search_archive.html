@@ -13,35 +13,27 @@
     </div>
 
     <section id="grid-container">
-      <div class="grid-item" id="url_0">
-        <img
-          src="https://www.sciencealert.com/images/2020-10/processed/mars-viking-image_1024.jpg"
-        />
-      </div>
-      <div class="grid-item" id="url_1">
-        <p>t1</p>
-        <img
-          src="https://www.sciencealert.com/images/2020-10/processed/mars-viking-image_1024.jpg"
-        />
-      </div>
-      <div class="grid-item" id="url_2">
-        <p>t2</p>
-        <img
-          src="https://www.sciencealert.com/images/2020-10/processed/mars-viking-image_1024.jpg"
-        />
-      </div>
-      <div class="grid-item" id="url_3">
-        <img
-          src="https://www.sciencealert.com/images/2020-10/processed/mars-viking-image_1024.jpg"
-        />
-      </div>
-      <div class="grid-item" id="url_4"></div>
-      <div class="grid-item" id="url_5"></div>
-      <div class="grid-item" id="url_6"></div>
-      <div class="grid-item" id="url_7"></div>
-      <div class="grid-item" id="url_8"></div>
-      <div class="grid-item" id="url_9"></div>
+      <!-- <div
+        class="grid-item"
+        title="titleWorks"
+        description="descriptionworks"
+        date = "dateWorks"
+        imgUrl = "urlWorks"
+        onclick="popupImage(this.getAttribute('title'),
+         this.getAttribute('description'),
+         this.getAttribute('date'),
+         this.getAttribute('imgUrl')
+         )"
+      >
+        <button>Click here</button>
+      </div> -->
     </section>
+    <div id="modal">
+      <h1 id="modal-title"></h1>
+      <img id="modal-img" />
+      <p id="modal-description"></p>
+      <date id="modal-date"></date>
+    </div>
   </body>
   <script src="assets/search_archive.js"></script>
 </html>
