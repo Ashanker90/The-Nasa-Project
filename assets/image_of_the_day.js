@@ -12,7 +12,7 @@ req.addEventListener("load", function(){
         let response = JSON.parse(req.responseText);
         document.getElementById("title").textContent = response.title;
         document.getElementById("date").textContent = response.date;
-        document.getElementById("pic").src = response.hdurl;
+        document.getElementById("pic").src = response.url;
         document.getElementById("explanation").textContent = response.explanation;
   }
 })
