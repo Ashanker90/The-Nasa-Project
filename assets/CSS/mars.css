@@ -47,3 +47,6 @@ td {
     margin: 100px;
     background:rgba(1,1,1,0.5);
 }
+body {
+    background-color: black;
+}
