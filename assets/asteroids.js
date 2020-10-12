@@ -1,6 +1,6 @@
 const req = new XMLHttpRequest();
-var today = new Date();
-var start_date = new Date().toISOString().slice(0,10);
+let today = new Date();
+let start_date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 const api_key = "wGXhi7fLKdBmDP5PdNR5Eu3N4JOvJ9lez2UnnqwJ";
 const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${start_date}&api_key=${api_key}`;
 
@@ -9,8 +9,8 @@ req.send();
 
 req.addEventListener("load", function() {
 	if(req.status == 200 && req.readyState == 4) {
-		var response = JSON.parse(req.responseText);
-		var asteroids = response.near_earth_objects[start_date];
+		let response = JSON.parse(req.responseText);
+		let asteroids = response.near_earth_objects[start_date];
 
 		if(asteroids.length==0)
 		{
