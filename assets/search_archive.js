@@ -107,5 +107,6 @@ function popupImage(title, description, date, url) {
 
 const modal = document.getElementById("modal");
 modal.addEventListener("click", (e) => {
+  //if e is not on image hide module
   console.log(e);
 });
