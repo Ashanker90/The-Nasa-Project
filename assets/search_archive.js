@@ -31,29 +31,7 @@ req.addEventListener("load", function () {
         data[i].data[0].title,
         i
       );
-
-      // console.log(`index: i`)
-      // console.log(`url_${i}: ${data[i].links[0].href}`);
-      // console.log(`title_${i}: ${i}`);
-      // console.log(`description_${i}:`);
-      // console.log(`date_${i}: ${i}`);
-
-      // debugger;
-      // document.getElementById('index').textContent = i;
-      //  document.getElementById(`url_${i}`).src = data[i].links[0].href;
-      //  document.getElementById(`title_${i}`).textContent = data[i].links[0].href;
-      //  document.getElementById(`description_${i}`).textContent = data[i].links[0].href;
-      //  document.getElementById(`date_${i}`).textContent = data[i].links[0];
     }
-
-    // if()
-
-    // document.getElementById("url_1").textContent = response.title;
-    // document.getElementById("date").textContent = response.date;
-    // document.getElementById("pic").src = response.hdurl;
-    // document.getElementById("explanation").textContent = response.explanation;
-    // let index = if
-    // for()
   }
 });
 
@@ -87,23 +65,18 @@ function popupImage(title, description, date, url) {
   const modalDate = document.getElementById("modal-date");
   const gridContainer = document.getElementById("grid-container");
 
-
-
   modalTitle.innerHTML = title;
   modalDescription.innerHTML = description;
   modalImg.setAttribute("src", url);
   modalDate.innerHTML = date;
+  modal.style.display = "block";
 }
 
-// if retrive_coount < 10
-// 	i = retrive_coount
-// else
-// 	i = 10
+var span = document.getElementsByClassName("close")[0];
 
-// url_i
-// description_i
-// date_i
-// title_i
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 const modal = document.getElementById("modal");
 modal.addEventListener("click", (e) => {
