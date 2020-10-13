@@ -69,6 +69,7 @@ function popupImage(title, description, date, url) {
   const modalImg = document.getElementById("modal-img");
   const modalDate = document.getElementById("modal-date");
 
+  console.log("modal titel" + modalTitle);
   modalTitle.innerHTML = title;
   modalDescription.innerHTML = description;
   modalImg.setAttribute("src", url);
