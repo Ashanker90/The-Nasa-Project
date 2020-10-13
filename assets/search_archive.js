@@ -8,7 +8,16 @@ function submit() {
   req.send();
 }
 
+function clearGridItems() {
+  const gridContainer = document.getElementById("grid-container");
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.lastChild);
+  }
+}
+
 req.addEventListener("load", function () {
+  clearGridItems();
+
   if (req.status == 200 && req.readyState == 4) {
     let response = JSON.parse(req.responseText);
     let count = response["collection"]["metadata"]["total_hits"];
@@ -35,10 +44,6 @@ req.addEventListener("load", function () {
   }
 });
 
-/*
-  Will need to have a check if there are elements
-    clear them
-*/
 function createGrid(url, description, date, title, index) {
   let div = document.createElement("DIV");
   let img = document.createElement("IMG");
@@ -63,7 +68,6 @@ function popupImage(title, description, date, url) {
   const modalDescription = document.getElementById("modal-description");
   const modalImg = document.getElementById("modal-img");
   const modalDate = document.getElementById("modal-date");
-  const gridContainer = document.getElementById("grid-container");
 
   modalTitle.innerHTML = title;
   modalDescription.innerHTML = description;
@@ -74,12 +78,6 @@ function popupImage(title, description, date, url) {
 
 var span = document.getElementsByClassName("close")[0];
 
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
-}
-
-const modal = document.getElementById("modal");
-modal.addEventListener("click", (e) => {
-  //if e is not on image hide module
-  console.log(e);
-});
+};
