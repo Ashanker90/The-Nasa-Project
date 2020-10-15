@@ -15,8 +15,7 @@ body {
     line-height: normal;
 }
 .wrapper{
-margin: 0 auto;
-width:100%;
+width: 100% !important;
 }
 
 /*NAV BAR*/
@@ -25,6 +24,17 @@ width:100%;
 .topnav {
   background-color: red;
   overflow: hidden;
+}
+.containernav {
+  width: 100%;
+  margin: 0 auto;
+  height: 70px;
+
+}
+.containernav .topnav {
+margin-right: -20px;
+margin-left: -20px;
+margin-top: -10px;
 }
 
 /* Style the links inside the navigation bar */
@@ -54,8 +64,18 @@ ul li {
   background-color: #4CAF50;
   color: white;
 }
+.logo{
+  display: inline-block;
+     vertical-align: top;
+     width: 50px;
+     height: 50px;
+     margin-right: 20px;
+     margin-left: 30px;
+     margin-top: 15px;
+     float:left;
+}
 
-/* CONTACT FORM */
+/* About us page & CONTACT FORM */
 
 .contact-form {
     margin-top: 50px;
@@ -64,10 +84,10 @@ ul li {
 }
 .help{
   margin-top:50px;
-  width: 100%;
   background-color: red;
   padding: 20 20px;
 }
+
 .about-title{
 text-align: center;
 color: blue;
@@ -104,5 +124,5 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: red;
 }
