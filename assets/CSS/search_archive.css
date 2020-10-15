@@ -1,3 +1,19 @@
+@import "base.css";
+
+body {
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+h2 {
+  color: red;
+}
+
+h1 {
+  color: #1058cc;
+}
+
 /* Add a black background color to the top navigation bar */
 .topnav {
   overflow: hidden;
@@ -21,13 +37,13 @@
   color: black;
 }
 
-/* Style the "active" element to highlight the current page */
+/*Style the "active" element to highlight the current page */
 .topnav a.active {
   background-color: #2196f3;
   color: white;
 }
 
-/* Style the search box inside the navigation bar */
+/*Style the search box inside the navigation bar */
 .topnav input[type="text"] {
   float: right;
   padding: 6px;
@@ -37,7 +53,7 @@
   font-size: 17px;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/*When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {
   .topnav a,
   .topnav input[type="text"] {
@@ -53,70 +69,100 @@
   }
 }
 
+/* Style the Image Used to Trigger the Modal */
+#modal-img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 50%;
+}
+
+#modal-img:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-description {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#modal-title {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 50px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-description,
+#modal-title {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+img {
+  width: 80%;
+  height: 80%;
+}
+
 #grid-container {
   display: grid;
-  background-color: black;
-  grid-template-columns: auto auto auto;
-}
-
-.grid-item {
-}
-
-.open {
-}
-
-/*the background of the modal*/
-#modal {
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.modal.open {
-  opacity: 1;
-  pointer-events: all;
-}
-
-#modal-img {
-  /*position: absolute;*/
-  display: block;
-  height: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  /* top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%) scale(1);*/
-}
-
-.img.open {
-  transform: translate(-50%, -50%);
-}
-
-.modal p {
-  color: white;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -5%);
-}
-
-#modal-title {
-  color: white;
-}
-
-#modal-description {
-  color: white;
-}
-
-#modal-date {
-  color: white;
-}
-
-#modal-button {
-  z-index: 2;
-  float: right;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
