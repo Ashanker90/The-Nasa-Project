@@ -23,6 +23,7 @@ req.addEventListener("load", function() {
         document.getElementById("temp-low").textContent = "Low: " + response[sol].AT.mn;
         document.getElementById("wind-direction").textContent = "Wind Direction: " + response[sol].WD.most_common.compass_point;
         document.getElementById("wind-speed").textContent = "Wind Speed: " + response[sol].HWS.mx + " (m/s)";
+        document.getElementById("atmospheric-pressure").textContent = "Atmospheric Pressure: " + response[sol].PRE.mx;
 
         buildTable(response);
     }
