@@ -1,3 +1,4 @@
+@import "base.css";
 table {
     border-spacing: 30px 0px;
 }
@@ -5,7 +6,7 @@ td {
     padding: 4px;
 }
 
-/*  fits the Mars image to the window the user is looking at it on */
+/*  fits the Mars image to the window the user is looking at it on
 img {
     padding: 0;
     display: block;
@@ -13,7 +14,7 @@ img {
     max-height: 100%;
     max-width: 100%;
 }
-
+*/
 .container {
     position: relative;
 }
@@ -58,5 +59,6 @@ img {
     background:rgba(1,1,1,0.5);
 }
 body {
+    background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/pia23492.jpg");
     background-color: black;
 }
