@@ -9,8 +9,7 @@ req.addEventListener("load", function() {
     if (req.status == 200 && req.readyState == 4) {
         const response = JSON.parse(req.responseText);
         const sol = response.sol_keys[6];
-        document.getElementById("header").textContent = "Welcome to Mars!";
-        document.getElementById("header2").textContent = "Today's Weather";
+
         document.getElementById("mars-date").textContent = "SOL " + response.sol_keys[6];
         date = new Date(response[sol].First_UTC);
         let month = date.toLocaleString("en-us", { month: "short" });
@@ -54,4 +53,3 @@ function buildTable(data) {
 
     table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
 }
-
