@@ -15,7 +15,7 @@ req.addEventListener("load", function() {
         let month = date.toLocaleString("en-us", { month: "short" });
         let day = date.getDate();
         let year = date.getFullYear();
-        let newDate = month +' ' + day +' ' + year
+        let newDate = month +' ' + day +' ' + year;
         document.getElementById("earth-date").textContent = newDate;
         document.getElementById("season").textContent = "Season: " + response[sol].Season;
         document.getElementById("temp-high").textContent = "High: " + response[sol].AT.mx;
@@ -43,7 +43,7 @@ function buildTable(data) {
         let month = date.toLocaleString("en-us", { month: "short" });
         let day = date.getDate();
         let year = date.getFullYear();
-        let newDate = month +' ' + day +' ' + year
+        let newDate = month +' ' + day +' ' + year;
 
         solRow += "<td>" + sol + "</td>";
         earthDateRow += "<td>" + newDate + "</td>";
