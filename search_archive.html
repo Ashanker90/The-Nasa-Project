@@ -2,26 +2,23 @@
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-
-    <div class="containernav">
-      <div class="topnav">
-        <img class="logo" src="galaxy.jpg">
-        <ul>
-          <li><a href="index.html">Home </a></li>
-          <li><a href="search_archive.html">NASA Library </a></li>
-          <li><a href="weather_on_mars.html">Weather On Mars </a></li>
-          <li><a href="asteroids.html">Asteroid NeoWs </a></li>
-          <li><a href="about-us.html">About Us </a></li>
-        </ul>
-      </div>
-    </div>
-
+    <meta charset = "utf-8">
+    <title> Navigation Bar </title>
+    <link rel="stylesheet" href="assets/CSS/base.css">
+    <link rel="stylesheet" href="assets/CSS/navbar.css">
 
     <title>Search</title>
     <link rel="stylesheet" href="assets/CSS/search_archive.css" />
-  </head>
+
   <body>
+    <nav class="topnav" id="menuTopNav">
+
+        <a href="index.html">Home </a>
+        <a href="search_archive.html">NASA Library </a>
+        <a href="weather_on_mars.html">Weather On Mars </a>
+        <a href="asteroids.html">Asteroid NeoWs </a>
+        <a href="about-us.html">About Us </a>
+    </nav>
     <div>
       <input type="text" id="title" placeholder="Search.." />
       <button type="submit" onClick="submit()">Submit</button>
@@ -38,4 +35,5 @@
     </div>
   </body>
   <script src="assets/search_archive.js"></script>
+</head>
 </html>
