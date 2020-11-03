@@ -8,10 +8,11 @@ req.send();
 req.addEventListener("load", function() {
     if (req.status == 200 && req.readyState == 4) {
         const response = JSON.parse(req.responseText);
-        const sol = response.sol_keys[6];
+        const length = response.sol_keys.length - 1;
+        const sol = response.sol_keys[length];
 
-        document.getElementById("mars-date").textContent = "SOL " + response.sol_keys[6];
-        date = new Date(response[sol].First_UTC);
+        document.getElementById("mars-date").textContent = "SOL " + response.sol_keys[length];
+        date = new Date(response[sol].Last_UTC);
         let month = date.toLocaleString("en-us", { month: "short" });
         let day = date.getDate();
         let year = date.getFullYear();
@@ -29,7 +30,7 @@ req.addEventListener("load", function() {
 })
 
 function buildTable(data) {
-    const solKeys =  data.sol_keys;
+    const solKeys = data.sol_keys;
     let table = document.getElementById("sol-table-body");
 
     let solRow = "<tr class='sol-table-body-row'/>";
@@ -39,7 +40,7 @@ function buildTable(data) {
 
     for (let i = 0; i < solKeys.length; i++) {
         const sol = solKeys[i];
-        date = new Date(data[sol].First_UTC);
+        date = new Date(data[sol].Last_UTC);
         let month = date.toLocaleString("en-us", { month: "short" });
         let day = date.getDate();
         let year = date.getFullYear();
@@ -47,8 +48,16 @@ function buildTable(data) {
 
         solRow += "<td>" + sol + "</td>";
         earthDateRow += "<td>" + newDate + "</td>";
-        highTempRow += "<td>High: " + data[sol].AT.mx + "<span>&deg;&nbsp;C</span></td>";
-        lowTempRow += "<td>Low: " + data[sol].AT.mn + "<span>&deg;&nbsp;C</span></td>";
+
+        let high_temp = "N/A";
+        let low_temp = "N/A";
+        if ("AT" in data[sol]) {
+            high_temp = data[sol].AT.mx;
+            low_temp = data[sol].AT.mn;
+        }
+
+        highTempRow += "<td>High: " + high_temp + "<span>&deg;&nbsp;C</span></td>";
+        lowTempRow += "<td>Low: " + low_temp + "<span>&deg;&nbsp;C</span></td>";
     }
 
     table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
