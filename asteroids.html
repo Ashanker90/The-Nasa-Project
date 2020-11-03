@@ -1,22 +1,16 @@
 <link rel="stylesheet" href="assets/CSS/base.css" />
+
 <head>
   <script src="assets/asteroids.js"></script>
   <link rel="stylesheet" href="assets/CSS/asteroids.css" />
+  <script src="jquery.js"></script>
+    <script>
+    $(function(){
+      $("#includedContent").load("navbar.html");
+    });
+    </script>
+
   <body>
-
-    <div class="containernav">
-      <div class="topnav">
-        <ul>
-          <li><a href="index.html">Home </a></li>
-          <li><a href="search_archive.html">NASA Library </a></li>
-          <li><a href="weather_on_mars.html">Weather On Mars </a></li>
-          <li><a href="asteroids.html">Asteroid NeoWs </a></li>
-          <li><a href="about-us.html">About Us </a></li>
-        </ul>
-      </div>
-    </div>
-
-
     <div class="container">
       <div class="current-date-block">
         <span id="today-date"></span>
@@ -38,6 +32,7 @@
       <div class="orbital_data">
         <span id="orbital_data"></span>
       </div>
+      <div id="includedContent"></div>
     </div>
     <ul id="list"></ul>
   </body>
