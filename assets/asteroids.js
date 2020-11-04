@@ -12,9 +12,9 @@ req.addEventListener("load", function () {
   if (req.status == 200 && req.readyState == 4) {
     let response = JSON.parse(req.responseText);
     let asteroids = response.near_earth_objects[start_date];
-
-    if (asteroids.length == 0) {
+    if (asteroids == undefined || asteroids.length == 0) {
       body: "No asteroids for today.";
+      createListItem("No asteroids for today");
     } else {
       try {
         for (var i = 0; i < asteroids.length; i++) {
