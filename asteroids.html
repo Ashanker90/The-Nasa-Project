@@ -1,7 +1,9 @@
+<html>
 <link rel="stylesheet" href="assets/CSS/base.css" />
-
+<script src="assets/asteroids.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <head>
-  <script src="assets/asteroids.js"></script>
+
   <link rel="stylesheet" href="assets/CSS/asteroids.css" />
   <meta charset = "utf-8">
   <title> Asteroids! </title>
@@ -18,13 +20,16 @@
         <a href="about-us.html">About Us </a>
     </nav>
 
-    <div class="container">
-      <div class="current-date-block">
-        <span id="today-date"></span>
+  <!--the line below shows the current date of the user's device-->
+  <h2>The start date is: <span id="start_date"></span></h2>
+  <!--the line below shows 7 days after the start date -->
+  <p>7 days after today is: <span id="second"></span></p>
+
+  <p>The api info: <span id='info'></span></p>
+  <p>The api information: <span id='stuff'></span></p>
+  <p>Asteroids: <ul id="list"></ul></p>
+    <div class="current-date-block">
         <span id="in-date"></span>
-      </div>
-      <div class="name">
-        <span id="name"></span>
       </div>
       <div class="id" id="id"></div>
       <div class="neo_reference_id">
@@ -40,7 +45,8 @@
         <span id="orbital_data"></span>
       </div>
       <div id="includedContent"></div>
-    </div>
+
     <ul id="list"></ul>
   </body>
 </head>
+</html>
