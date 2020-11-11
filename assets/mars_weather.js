@@ -17,13 +17,44 @@ req.addEventListener("load", function() {
         let day = date.getDate();
         let year = date.getFullYear();
         let newDate = month +' ' + day +' ' + year;
+
+        let SEASON = "N/A";
+        if ("Season" in response[sol]) {
+            SEASON = response[sol].Season === null ? "N/A" : response[sol].Season;
+        }
+
+        let HIGH = "N/A";
+        if ("AT" in response[sol]) {
+            HIGH = response[sol].AT.mx === null ? "N/A" : response[sol].AT.mx;
+        }
+
+        let LOW = "N/A";
+        if ("AT" in response[sol]) {
+            LOW = response[sol].AT.mN === null ? "N/A" : response[sol].AT.mn;
+        }
+
+        let WD = "N/A";
+        if ("most_common" in response[sol]) {
+            WD = response[sol].WD.most_common === null ? "N/A" : response[sol].WD.most_common.compass_point;
+        }
+
+        let WS = "N/A";
+        if ("HWS" in response[sol]) {
+            WS = response[sol].HWS.mx;
+        }
+
+        let AP = "N/A";
+        if ("PRE" in response[sol]) {
+            AP = response[sol].PRE.mx === null ? "N/A" : response[sol].PRE.mx;
+        }
+
         document.getElementById("earth-date").textContent = newDate;
-        document.getElementById("season").textContent = "Season: " + response[sol].Season;
-        document.getElementById("temp-high").textContent = "High: " + response[sol].AT.mx;
-        document.getElementById("temp-low").textContent = "Low: " + response[sol].AT.mn;
-        document.getElementById("wind-direction").textContent = "Wind Direction: " + response[sol].WD.most_common.compass_point;
-        document.getElementById("wind-speed").textContent = "Wind Speed: " + response[sol].HWS.mx + " (m/s)";
-        document.getElementById("atmospheric-pressure").textContent = "Atmospheric Pressure: " + response[sol].PRE.mx;
+        document.getElementById("season").textContent = "Season: " + SEASON;
+        document.getElementById("temp-high").textContent = "High: " + HIGH;
+        document.getElementById("temp-low").textContent = "Low: " + LOW;
+        document.getElementById("wind-direction").textContent = "Wind Direction: " + WD;
+        document.getElementById("wind-speed").textContent = "Wind Speed: " + WS + " (m/s)";
+        document.getElementById("atmospheric-pressure").textContent = "Atmospheric Pressure: " + AP;
 
         buildTable(response);
     }
@@ -59,6 +90,7 @@ function buildTable(data) {
         highTempRow += "<td>High: " + high_temp + "<span>&deg;&nbsp;C</span></td>";
         lowTempRow += "<td>Low: " + low_temp + "<span>&deg;&nbsp;C</span></td>";
     }
+
 
     table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
 }
