@@ -24,11 +24,10 @@ req.send();
 req.addEventListener("load", function () {
   if (req.status == 200 && req.readyState == 4) {
     let response = JSON.parse(req.responseText);
-    //let length = response.near_earth_objects.length - 1;
+    let length = response.near_earth_objects.length - 1;
     //the line below gets the current date of the device
     document.getElementById("start_date").innerHTML = today;
     document.getElementById("second").innerHTML = second;
-
     //takes the stuff from the response and makes it a string
     let stuff = JSON.stringify(response);
     //outputs what is being responded
@@ -37,8 +36,6 @@ req.addEventListener("load", function () {
     //makeNearEarth(stuff);
 
     let asteroids = response.near_earth_objects[start_date];
-    console.log(asteroids);
-
     if (asteroids == undefined || asteroids.length == 0) {
       body: "No asteroids for today.";
       createListItem("No asteroids for today");
