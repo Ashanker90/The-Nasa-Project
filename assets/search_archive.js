@@ -8,6 +8,8 @@ function submit() {
   req.send();
 }
 
+//new promises
+
 function clearGridItems() {
   const gridContainer = document.getElementById("grid-container");
   while (gridContainer.firstChild) {
