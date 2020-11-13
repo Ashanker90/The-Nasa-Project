@@ -3,12 +3,36 @@ let req = new XMLHttpRequest();
 function submit() {
   let title = document.getElementById("title").value;
   let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
+  console.log("in submit");
+  fetch("https://randomuser.me/api/?results=10")
+    .then((resp) => resp.json()) // Transform the data into json
+    .then(function (data) {
+      console.log(data);
+      console.log("here");
+      // Create and append the li's to the ul
+    });
 
+  // fetch("https://randomuser.me/api/?results=10", {
+  //   method: "GET",
+  // })
+  //   .then((res) => res.json)
+  //   .then((data) => console.log(data));
+  debugger;
+  getResponse(url);
   req.open("GET", url);
   req.send();
 }
 
 //new promises
+function getResponse(url) {
+  (async () => {
+    const res = await fetch(url);
+    console.log("res " + res);
+    console.log(res);
+
+    debugger;
+  })();
+}
 
 function clearGridItems() {
   const gridContainer = document.getElementById("grid-container");
