@@ -24,10 +24,11 @@ req.send();
 req.addEventListener("load", function () {
   if (req.status == 200 && req.readyState == 4) {
     let response = JSON.parse(req.responseText);
-    let length = response.near_earth_objects.length - 1;
+    //let length = response.near_earth_objects.length - 1;
     //the line below gets the current date of the device
     document.getElementById("start_date").innerHTML = today;
     document.getElementById("second").innerHTML = second;
+
     //takes the stuff from the response and makes it a string
     let stuff = JSON.stringify(response);
     //outputs what is being responded
@@ -36,6 +37,8 @@ req.addEventListener("load", function () {
     //makeNearEarth(stuff);
 
     let asteroids = response.near_earth_objects[start_date];
+    console.log(asteroids);
+
     if (asteroids == undefined || asteroids.length == 0) {
       body: "No asteroids for today.";
       createListItem("No asteroids for today");
@@ -43,11 +46,11 @@ req.addEventListener("load", function () {
       try {
         for (var i = 0; i < asteroids.length; i++) {
           // asteroids.push(response);
-          // createListItem(asteroids[i].name);
+           createListItem(asteroids[i].name);
           // var obj = asteroids[todayDate][i];
 
           var name = asteroids[i].name;
-          alert("NAME: " + name);
+          //alert("NAME: " + name);
 
           // var lunarDistance = obj.close_approach_data[0].miss_distance.lunar;
           // var id = obj.id[0];
@@ -72,32 +75,32 @@ req.addEventListener("load", function () {
   //  document.getElementById("orbital_data").textContent = response.orbital_data;
 });
 
-function makeNearEarth(data) {
-       var object = data;
-       var nearEarth = object.near_earth_objects;
-
-       //if(nearEarth.length==0)
-      // {
-      //   console.log(" neo is undefined ");
-       //}
-      // else {
-         try
-         {
-           for(var i = 0; i < nearEarth[sevenStr].length; i++)
-           {
-             var obj = nearEarth[sevenStr][i];
-             asteroids.push({
-               title: obj.date});
-           }
-         } catch(err) {
-           console.log('Caught error' + err);
-         }
-       }
-     //}
-
 function createListItem(name) {
   const list = document.getElementById("list");
   const li = document.createElement("LI");
   li.innerHTML = name;
   list.appendChild(li);
 }
+
+//function makeNearEarth(data) {
+//       var object = data;
+  //     var nearEarth = object.near_earth_objects;
+
+       //if(nearEarth.length==0)
+      // {
+      //   console.log(" neo is undefined ");
+       //}
+      // else {
+  //       try
+  //       {
+  //         for(var i = 0; i < nearEarth[sevenStr].length; i++)
+  //         {
+  //           var obj = nearEarth[sevenStr][i];
+  //           asteroids.push({
+    //           title: obj.date});
+  //         }
+  //       } catch(err) {
+  //         console.log('Caught error' + err);
+  //       }
+  //     }
+     //}

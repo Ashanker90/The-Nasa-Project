@@ -1,13 +1,5 @@
-@font-face {
-  font-family: "nasalizationregular";
-  src: url("fonts/nasalization-free.regular-webfont.woff2") format("woff2"),
-    url("fonts/nasalization-free.regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-  font-family: "nasalizationregular";
-}
+@import "base.css";
+
 .container {
   position: relative;
 }
@@ -54,6 +46,7 @@ body {
 }
 
 body {
+  background-image: url("https://images-assets.nasa.gov/image/ACD17-0168-009/ACD17-0168-009~medium.jpg");
+  background-size: cover;
   background-color: black;
-  color: white;
 }
