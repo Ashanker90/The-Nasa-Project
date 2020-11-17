@@ -1,37 +1,52 @@
 let req = new XMLHttpRequest();
-
+let y = 0;
 function submit() {
   let title = document.getElementById("title").value;
   let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
   console.log("in submit");
-  fetch("https://randomuser.me/api/?results=10")
-    .then((resp) => resp.json()) // Transform the data into json
-    .then(function (data) {
-      console.log(data);
-      console.log("here");
-      // Create and append the li's to the ul
-    });
+
+  console.log(getResponse(url));
+
+  //getResponse(url).then((res) => console.log(res));
+  // .then((res) => res.json)
+  // .then((data) => console.log(data));
+  console.log("moving on");
+  // fetch(url)
+  //   .then((resp) => resp.json()) // Transform the data into json
+  //   .then(function (data) {
+  //     console.log(data);
+  //     console.log("here");
+  //   });
 
   // fetch("https://randomuser.me/api/?results=10", {
   //   method: "GET",
   // })
   //   .then((res) => res.json)
   //   .then((data) => console.log(data));
-  debugger;
-  getResponse(url);
-  req.open("GET", url);
-  req.send();
+
+  // getResponse(url);
+  // req.open("GET", url);
+  // req.send();
 }
-
+let x = 0;
 //new promises
-function getResponse(url) {
-  (async () => {
-    const res = await fetch(url);
-    console.log("res " + res);
-    console.log(res);
+async function getResponse(url) {
+  let result;
+  try{
+    await fetch(url)
+    .then((resp) => resp.json()) // Transform the data into json
+    .then(function (data) {
+      //console.log(data);
+      result = data;
+      //console.log("here");
+    });
+  }catch{
+    alert("Tell NASA TO CODE BETTER. There was an error");
+    result = null;
+  }
+  
 
-    debugger;
-  })();
+  return result;
 }
 
 function clearGridItems() {
