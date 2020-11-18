@@ -3,14 +3,12 @@ let y = 0;
 function submit() {
   let title = document.getElementById("title").value;
   let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
-  console.log("in submit");
 
   console.log(getResponse(url));
 
   //getResponse(url).then((res) => console.log(res));
   // .then((res) => res.json)
   // .then((data) => console.log(data));
-  console.log("moving on");
   // fetch(url)
   //   .then((resp) => resp.json()) // Transform the data into json
   //   .then(function (data) {
@@ -32,19 +30,15 @@ let x = 0;
 //new promises
 async function getResponse(url) {
   let result;
-  try{
+  try {
     await fetch(url)
-    .then((resp) => resp.json()) // Transform the data into json
-    .then(function (data) {
-      //console.log(data);
-      result = data;
-      //console.log("here");
-    });
-  }catch{
-    alert("Tell NASA TO CODE BETTER. There was an error");
-    result = null;
+      .then((resp) => resp.json()) // Transform the data into json
+      .then(function (data) {
+        result = data.collection.items;
+      });
+  } catch {
+    alert("TELL NASA TO CODE BETTER, THE API BROKE");
   }
-  
 
   return result;
 }
