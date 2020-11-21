@@ -45,8 +45,17 @@
   text-align: center;
 }
 
+h1
+{
+  align-items: center;
+  text-align: center;
+}
+
 body {
-  background-image: url("https://images-assets.nasa.gov/image/ACD17-0168-009/ACD17-0168-009~medium.jpg");
+    background: url("https://images-assets.nasa.gov/image/ACD17-0168-009/ACD17-0168-009~medium.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-color: black;
 }
