@@ -51,11 +51,44 @@ h1
   text-align: center;
 }
 
-body {
-    background: url("https://images-assets.nasa.gov/image/ACD17-0168-009/ACD17-0168-009~medium.jpg");
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.start_date
+{
+  font-size: 1em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+}
+
+.asteroidsgif img
+{
+  display: flex;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul
+{
+  list-style-type: upper-roman;
+  list-style-position: inside;
+  padding-right: 5px;
+  background-color: blue;
+  background-clip: content-box;
+  border: 3px solid white;
+  text-align: center;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+body
+{
   background-color: black;
 }
