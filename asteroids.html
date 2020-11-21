@@ -19,33 +19,33 @@
         <a href="about-us.html">About Us </a>
     </nav>
 
-     <h1>Asteroids: Near Earth Objects!</h1>
+  <h1>Asteroids: Near Earth Objects!</h1>
+<div class="row">
+    <div class="columnOne" style="background-color: #B00000;">
+      <!--the line below shows the current date of the user's device-->
+      <p>Today's date is </p>
+      <!--  <span id="start_date"></span>-->
+      <div class="calander">
+              <p><span id="start_month"></span></p>
+              <h1><span id="start_day"></span></h1>
+      </div>
+      <!--the line below shows 7 days after the start date -->
+      <p>7 days after today is </p>
+      <!--<span id="second"></span>-->
+      <div class="calanderTwo">
+              <p><span id="end_month"></span></p>
+              <h1><span id="end_day"></span></h1>
+      </div>
+    </div>
+    <div class="columnOne" style="background-color: red;">
+      <p>The asteroids near Earth are </p><ul id="list"></ul></p>
+    </div>
+</div>
 
-  <!--the line below shows the current date of the user's device-->
-  <p>The start date is: <span id="start_date"></span></p>
-  <!--the line below shows 7 days after the start date -->
-  <p>7 days after today is: <span id="second"></span></p>
-  <p>Asteroids: <ul id="list"></ul></p>
   <div class = "asteroidsgif">
     <img src="./assets/images/asteroid.gif" id='asteroidGif'>
   </div>
-    <div class="current-date-block">
-        <span id="in-date"></span>
-      </div>
-      <div class="id" id="id"></div>
-      <div class="neo_reference_id">
-        <span id="neo_reference_id"></span>
-      </div>
-      <div class="is_potentially_hazardous_asteroid">
-        <span id="is_potentially_hazardous_asteroid"></span>
-      </div>
-      <div class="close_approach_data">
-        <span id="close_approach_data"></span>
-      </div>
-      <div class="orbital_data">
-        <span id="orbital_data"></span>
-      </div>
-      <div id="includedContent"></div>
+
 
 <!--    <ul id="list"></ul>-->
   </body>
