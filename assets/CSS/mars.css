@@ -5,25 +5,12 @@ table {
 td {
     padding: 4px;
 }
-
-/*  fits the Mars image to the window the user is looking at it on
-img {
-    padding: 0;
-    display: block;
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
-}
-*/
-/*.container {*/
-/*    position: relative;*/
-/*}*/
 .page-header {
-    position: relative;
+    position: absolute;
     top: 50px;
     color: white;
     font-size: 20px;
-    *padding-left: 10%;
+    padding-left: 780px;
     text-align: center;
 }
 .current-date-block {
@@ -53,9 +40,10 @@ img {
     text-align: center;
 }
 .sol-table-body-row {
+    /*position: relative;*/
     color: white;
     font-size: 120%;
-    margin: 100px;
+    /*margin: 100px;*/
     background:rgba(1,1,1,0.5);
 }
 body {

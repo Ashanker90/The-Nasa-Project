@@ -1,5 +1,4 @@
 <html>
-
     <head>
         <script src="assets/mars_weather.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,36 +19,32 @@
           <a href="about-us.html">About Us </a>
         </nav>
 
-<!--        <div class="container">-->
+        <div class="page-header">
+            <h1>Welcome to Mars!</h1>
+            <h2>Today's Weather</h2>
+        </div>
+        <div class="current-date-block">
+            <span id="mars-date"></span>
+            <br/>
+            <span id="earth-date"></span>
+        </div>
+        <div class="weather">
+            <span id="season"></span>
+            <br/>
+            <span id="temp-high"></span><span>&deg;&nbsp;C</span>
+            <br/>
+            <span id="temp-low"></span><span>&deg;&nbsp;C</span>
+            <br/>
+            <span id="wind-direction"></span>
+            <br/>
+            <span id="wind-speed"></span>
+            <br/>
+            <span id="atmospheric-pressure"></span>
+        </div>
 
-            <div class="page-header">
-                <h1>Welcome to Mars!</h1>
-                <h2>Today's Weather: </h2>
-            </div>
-            <div class="current-date-block">
-                <span id="mars-date"></span>
-                <br/>
-                <span id="earth-date"></span>
-            </div>
-            <div class="weather">
-                <span id="season"></span>
-                <br/>
-                <span id="temp-high"></span><span>&deg;&nbsp;C</span>
-                <br/>
-                <span id="temp-low"></span><span>&deg;&nbsp;C</span>
-                <br/>
-                <span id="wind-direction"></span>
-                <br/>
-                <span id="wind-speed"></span>
-                <br/>
-                <span id="atmospheric-pressure"></span>
-            </div>
-
-            <table class="sol-table">
-                <tbody class="sol-table-body" id="sol-table-body">
-                </tbody>
-            </table>
-<!--        </div>-->
+        <table class="sol-table">
+            <tbody class="sol-table-body" id="sol-table-body">
+            </tbody>
+        </table>
     </body>
-
 </html>
