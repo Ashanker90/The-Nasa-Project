@@ -5,7 +5,7 @@ let today = new Date();
 let start_date = today
     .toLocaleString('en-us', {year: 'numeric', month: '2-digit', day: '2-digit'})
     .replace(/(\d+)\/(\d+)\/(\d+)/, '$3-$1-$2');
-let months = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"];
+let months = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
 let monthWord = months[today.getMonth()];
 //let start_month = today.toLocaleString('en-us', { month: '2-digit' });
 // let date = start_date.toString();
@@ -38,10 +38,6 @@ req.addEventListener("load", function () {
     document.getElementById("end_day").innerHTML = second.getDate();
     //takes the stuff from the response and makes it a string
     let stuff = JSON.stringify(response);
-    //outputs what is being responded
-    //document.getElementById('length').innerHTML = length;
-    // document.getElementById('stuff').innerHTML = stuff;
-    //makeNearEarth(stuff);
 
     let asteroids = response.near_earth_objects[start_date];
     console.log(asteroids);
@@ -58,28 +54,12 @@ req.addEventListener("load", function () {
 
           var name = asteroids[i].name;
           //alert("NAME: " + name);
-
-          // var lunarDistance = obj.close_approach_data[0].miss_distance.lunar;
-          // var id = obj.id[0];
-          // var neo_reference_id = obj.neo_reference_id;
-          // var hazard = obj.is_potentially_hazardous_asteroid;
-          // var close = obj.close_approach_data;
-          // var orbit = obj.orbital_data;
         }
       } catch (err) {
         console.log("Caught error" + err);
       }
     }
   }
-
-  //  document.getElementById("today-date").textContent = "start_date";
-  //  document.getElementById("in-date").textContent = response.start_date;
-  //  document.getElementById("name").textContent = response.name;
-  //  document.getElementById("id").textContent = response.id;
-  //  document.getElementById("neo_reference_id").textContent = response.neo_reference_id;
-  //  document.getElementById("is_potentially_hazardous_asteroid").textContent = response.is_potentially_hazardous_asteroid;
-  //  document.getElementById("close_approach_data").src = response.close_approach_data;
-  //  document.getElementById("orbital_data").textContent = response.orbital_data;
 });
 
 function createListItem(name) {
@@ -88,26 +68,3 @@ function createListItem(name) {
   li.innerHTML = name;
   list.appendChild(li);
 }
-
-//function makeNearEarth(data) {
-//       var object = data;
-  //     var nearEarth = object.near_earth_objects;
-
-       //if(nearEarth.length==0)
-      // {
-      //   console.log(" neo is undefined ");
-       //}
-      // else {
-  //       try
-  //       {
-  //         for(var i = 0; i < nearEarth[sevenStr].length; i++)
-  //         {
-  //           var obj = nearEarth[sevenStr][i];
-  //           asteroids.push({
-    //           title: obj.date});
-  //         }
-  //       } catch(err) {
-  //         console.log('Caught error' + err);
-  //       }
-  //     }
-     //}
