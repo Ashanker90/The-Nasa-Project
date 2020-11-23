@@ -60,7 +60,7 @@ async function getMarsData() {
 
         return res;
     } catch (error) {
-        alert("Error occurred while calling Mars API. Please retry...");
+        alert("Error occurred while calling the Mars API. Please retry...");
     }
 }
 
@@ -82,7 +82,7 @@ function buildTable(data) {
         let newDate = month +' ' + day +' ' + year;
 
         solRow += "<td>" + sol + "</td>";
-        earthDateRow += "<td>" + newDate + "</td>";
+        earthDateRow += "<td style='border-bottom-style: solid'>" + newDate + "</td>";
 
         let high_temp = "N/A";
         let low_temp = "N/A";
