@@ -94,6 +94,5 @@ function buildTable(data) {
         highTempRow += "<td>High: " + high_temp + "<span>&deg;&nbsp;C</span></td>";
         lowTempRow += "<td>Low: " + low_temp + "<span>&deg;&nbsp;C</span></td>";
     }
-
     table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
 }

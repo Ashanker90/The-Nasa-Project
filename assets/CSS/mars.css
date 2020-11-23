@@ -7,19 +7,19 @@ td {
 }
 .page-header {
     position: absolute;
-    top: 50px;
+    top: 5%;
     color: white;
-    font-size: 20px;
-    padding-left: 780px;
+    font-size: 140%;
+    padding-left: 38%;
     text-align: center;
 }
 .current-date-block {
     position: absolute;
-    top: 300px;
+    top: 30%;
     background-color: transparent;
     color: white;
     font-size: 200%;
-    padding-left: 60px;
+    padding-left: 5%;
     text-align: center;
 }
 .weather {
@@ -28,15 +28,15 @@ td {
     background-color: transparent;
     color: white;
     font-size: 180%;
-    padding-left: 60px;
+    padding-left: 5%;
     text-align: left;
 }
 .sol-table-body {
     position: absolute;
-    top: 775px;
+    top: 75%;
     background-color: transparent;
     color: white;
-    padding-left: 0px;
+    padding-left: 2%;
     text-align: center;
 }
 .sol-table-body-row {
