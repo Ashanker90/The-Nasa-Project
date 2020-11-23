@@ -17,7 +17,6 @@ function submit() {
   // })
   //   .then((res) => res.json)
   //   .then((data) => console.log(data));
-  debugger;
   getResponse(url);
   req.open("GET", url);
   req.send();
@@ -29,8 +28,6 @@ function getResponse(url) {
     const res = await fetch(url);
     console.log("res " + res);
     console.log(res);
-
-    debugger;
   })();
 }
 
