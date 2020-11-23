@@ -4,20 +4,11 @@ let y = 0;
 function submit() {
   let title = document.getElementById("title").value;
   let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
-
-<<<<<<< HEAD
-=======
-  // fetch("https://randomuser.me/api/?results=10", {
-  //   method: "GET",
-  // })
-  //   .then((res) => res.json)
-  //   .then((data) => console.log(data));
->>>>>>> 2cf352d11db5b3c9dd7279159cc6ec9871a98fa8
+  
   getResponse(url);
 }
 
 //new promises
-<<<<<<< HEAD
 async function getResponse(url) {
   try {
     await fetch(url)
@@ -28,14 +19,6 @@ async function getResponse(url) {
   } catch {
     alert("TELL NASA TO CODE BETTER. THE API BROKE");
   }
-=======
-function getResponse(url) {
-  (async () => {
-    const res = await fetch(url);
-    console.log("res " + res);
-    console.log(res);
-  })();
->>>>>>> 2cf352d11db5b3c9dd7279159cc6ec9871a98fa8
 }
 
 function clearGridItems() {
