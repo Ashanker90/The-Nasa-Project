@@ -39,18 +39,18 @@
                     <span class="celsius" id="temp-high-c" style="display: inline-block;"></span>
                     <span class="fahrenheit" id="temp-high-f" style="display: none;"></span>
                     <span class="degree">
-                        <span class="lbl_fahrenheit" onclick="toggleTemp('F')">F</span>
+                        <span id="lbl-temp-high-f" style="color: white; cursor: pointer;" onclick="toggleTemp('F')">F</span>
                         <span class="slash"> | </span>
-                        <span class="lbl_celsius" onclick="toggleTemp('C')">C</span>
+                        <span id="lbl-temp-high-c" style="color: #dddddd; cursor: text;" onclick="toggleTemp('C')">C</span>
                     </span>
                 </div>
                 <div class="low-temp">
                     <span class="celsius" id="temp-low-c" style="display: inline-block;"></span>
                     <span class="fahrenheit" id="temp-low-f" style="display: none;"></span>
                     <span class="degree">
-                        <span class="lbl_fahrenheit" onclick="toggleTemp('F')">F</span>
+                        <span id="lbl-temp-low-f" style="color: white; cursor: pointer;" onclick="toggleTemp('F')">F</span>
                         <span class="slash"> | </span>
-                        <span class="lbl_celsius" onclick="toggleTemp('C')">C</span>
+                        <span id="lbl-temp-low-c" style="color: #dddddd; cursor: text;" onclick="toggleTemp('C')">C</span>
                     </span>
                 </div>
                 <span id="wind-direction"></span>

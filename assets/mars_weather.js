@@ -107,14 +107,28 @@ function buildTable(data) {
 function toggleTemp(c_f) {
     if (c_f == 'F') {
         document.getElementById('temp-high-f').style = 'display: inline-block;';
+        document.getElementById('lbl-temp-high-f').style = 'color: #dddddd; cursor: text;';
+
         document.getElementById('temp-low-f').style = 'display: inline-block;';
+        document.getElementById('lbl-temp-low-f').style = 'color: #dddddd; cursor: text;';
+
         document.getElementById('temp-high-c').style = 'display: none;';
+        document.getElementById('lbl-temp-high-c').style = 'color: white; cursor: pointer;';
+
         document.getElementById('temp-low-c').style = 'display: none;';
+        document.getElementById('lbl-temp-low-c').style = 'color: white; cursor: pointer;';
     } else if (c_f = 'C') {
         document.getElementById('temp-high-c').style = 'display: inline-block;';
+        document.getElementById('lbl-temp-high-c').style = 'color: #dddddd; cursor: text;';
+
         document.getElementById('temp-low-c').style = 'display: inline-block;';
+        document.getElementById('lbl-temp-low-c').style = 'color: #dddddd; cursor: text;';
+
         document.getElementById('temp-high-f').style = 'display: none;';
+        document.getElementById('lbl-temp-high-f').style = 'color: white; cursor: pointer;';
+
         document.getElementById('temp-low-f').style = 'display: none;';
+        document.getElementById('lbl-temp-low-f').style = 'color: white; cursor: pointer;';
     } else {
         alert("Invalid degree type?");
     }

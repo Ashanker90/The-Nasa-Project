@@ -47,6 +47,3 @@ body {
     margin-right:auto;
     width:960px;
 }
-degree .lbl_fahrenheit, .degree, .lbl_celsius {
-    cursor: pointer;
-}
