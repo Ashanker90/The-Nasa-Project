@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <script src="assets/mars_weather.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,25 +23,43 @@
             <h1>Welcome to Mars!</h1>
             <h2>Today's Weather</h2>
         </div>
+        <br/>
         <div class="current-date-block">
             <span id="mars-date"></span>
             <br/>
             <span id="earth-date"></span>
         </div>
+        <br/>
+        <br/>
         <div class="weather">
             <span id="season"></span>
             <br/>
-            <span id="temp-high"></span><span>&deg;&nbsp;C</span>
-            <br/>
-            <span id="temp-low"></span><span>&deg;&nbsp;C</span>
-            <br/>
+            <div class="high-temp">
+                <span class="celsius" id="temp-high-c" style="display: inline-block;"></span>
+                <span class="fahrenheit" id="temp-high-f" style="display: none;"></span>
+                <span class="degree">
+                    <span class="lbl_fahrenheit" onclick="toggleTemp('F')">F</span>
+                    <span class="slash"> | </span>
+                    <span class="lbl_celsius" onclick="toggleTemp('C')">C</span>
+                </span>
+            </div>
+            <div class="low-temp">
+                <span class="celsius" id="temp-low-c" style="display: inline-block;"></span>
+                <span class="fahrenheit" id="temp-low-f" style="display: none;"></span>
+                <span class="degree">
+                    <span class="lbl_fahrenheit" onclick="toggleTemp('F')">F</span>
+                    <span class="slash"> | </span>
+                    <span class="lbl_celsius" onclick="toggleTemp('C')">C</span>
+                </span>
+            </div>
             <span id="wind-direction"></span>
             <br/>
             <span id="wind-speed"></span>
             <br/>
             <span id="atmospheric-pressure"></span>
         </div>
-
+        <br/>
+        <br/>
         <table class="sol-table">
             <tbody class="sol-table-body" id="sol-table-body">
             </tbody>

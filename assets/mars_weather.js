@@ -17,14 +17,18 @@ getMarsData().then(response => {
         SEASON = response[sol].Season === null ? "N/A" : response[sol].Season;
     }
 
-    let HIGH = "N/A";
+    let HIGH_C = "N/A";
+    let HIGH_F = "N/A";
     if ("AT" in response[sol]) {
-        HIGH = response[sol].AT.mx === null ? "N/A" : response[sol].AT.mx;
+        HIGH_C = response[sol].AT.mx === null ? "N/A" : response[sol].AT.mx + '°';
+        HIGH_F = response[sol].AT.mx === null ? "N/A" : ((response[sol].AT.mx) * (9/5) + 32) + '°';
     }
 
-    let LOW = "N/A";
+    let LOW_C = "N/A";
+    let LOW_F = "N/A";
     if ("AT" in response[sol]) {
-        LOW = response[sol].AT.mN === null ? "N/A" : response[sol].AT.mn;
+        LOW_C = response[sol].AT.mn === null ? "N/A" : response[sol].AT.mn + '°';
+        LOW_F = response[sol].AT.mn === null ? "N/A" :((response[sol].AT.mn) * (9/5) + 32) + '°';
     }
 
     let WD = "N/A";
@@ -44,8 +48,10 @@ getMarsData().then(response => {
 
     document.getElementById("earth-date").textContent = newDate;
     document.getElementById("season").textContent = "Season: " + SEASON;
-    document.getElementById("temp-high").textContent = "High: " + HIGH;
-    document.getElementById("temp-low").textContent = "Low: " + LOW;
+    document.getElementById("temp-high-c").textContent = "High: " + HIGH_C;
+    document.getElementById("temp-high-f").textContent = "High: " + HIGH_F;
+    document.getElementById("temp-low-c").textContent = "Low: " + LOW_C;
+    document.getElementById("temp-low-f").textContent = "Low: " + LOW_F;
     document.getElementById("wind-direction").textContent = "Wind Direction: " + WD;
     document.getElementById("wind-speed").textContent = "Wind Speed: " + WS + " (m/s)";
     document.getElementById("atmospheric-pressure").textContent = "Atmospheric Pressure: " + AP;
@@ -60,7 +66,7 @@ async function getMarsData() {
 
         return res;
     } catch (error) {
-        alert("Error occurred while calling Mars API. Please retry...");
+        alert("Error occurred while calling the Mars API. Please try again...");
     }
 }
 
@@ -82,7 +88,7 @@ function buildTable(data) {
         let newDate = month +' ' + day +' ' + year;
 
         solRow += "<td>" + sol + "</td>";
-        earthDateRow += "<td>" + newDate + "</td>";
+        earthDateRow += "<td style='border-bottom-style: solid'>" + newDate + "</td>";
 
         let high_temp = "N/A";
         let low_temp = "N/A";
@@ -96,4 +102,20 @@ function buildTable(data) {
     }
 
     table.innerHTML += solRow + earthDateRow + highTempRow + lowTempRow;
+}
+
+function toggleTemp(c_f) {
+    if (c_f == 'F') {
+        document.getElementById('temp-high-f').style = 'display: inline-block;';
+        document.getElementById('temp-low-f').style = 'display: inline-block;';
+        document.getElementById('temp-high-c').style = 'display: none;';
+        document.getElementById('temp-low-c').style = 'display: none;';
+    } else if (c_f = 'C') {
+        document.getElementById('temp-high-c').style = 'display: inline-block;';
+        document.getElementById('temp-low-c').style = 'display: inline-block;';
+        document.getElementById('temp-high-f').style = 'display: none;';
+        document.getElementById('temp-low-f').style = 'display: none;';
+    } else {
+        alert("Invalid degree type?");
+    }
 }
