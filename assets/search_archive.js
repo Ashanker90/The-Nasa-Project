@@ -3,9 +3,20 @@ let req = new XMLHttpRequest();
 function submit() {
   let title = document.getElementById("title").value;
   let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
+  console.log(url);
+  getResponse(url);
+}
 
-  req.open("GET", url);
-  req.send();
+async function getResponse(url) {
+  try {
+    await fetch(url)
+      .then((resp) => resp.json()) // Transform the data into json
+      .then(function (data) {
+        parseData(data);
+      });
+  } catch {
+    alert("TELL NASA TO CODE BETTER. THE API BROKE");
+  }
 }
 
 function clearGridItems() {
@@ -15,34 +26,31 @@ function clearGridItems() {
   }
 }
 
-req.addEventListener("load", function () {
+function parseData(json) {
   clearGridItems();
 
-  if (req.status == 200 && req.readyState == 4) {
-    let response = JSON.parse(req.responseText);
-    let count = response["collection"]["metadata"]["total_hits"];
-    let data = response["collection"]["items"];
-    let index = 0;
+  let count = json["collection"]["metadata"]["total_hits"];
+  let data = json["collection"]["items"];
+  let index = 0;
 
-    if (count < 10) {
-      index = count;
-    } else {
-      index = 10;
-    }
-
-    let i;
-
-    for (i = 0; i < index; i++) {
-      createGrid(
-        data[i].links[0].href,
-        data[i].data[0].description,
-        data[i].data[0].date_created,
-        data[i].data[0].title,
-        i
-      );
-    }
+  if (count < 10) {
+    index = count;
+  } else {
+    index = 10;
   }
-});
+
+  let i;
+
+  for (i = 0; i < index; i++) {
+    createGrid(
+      data[i].links[0].href,
+      data[i].data[0].description,
+      data[i].data[0].date_created,
+      data[i].data[0].title,
+      i
+    );
+  }
+}
 
 function createGrid(url, description, date, title, index) {
   let div = document.createElement("DIV");
