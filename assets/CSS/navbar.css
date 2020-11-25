@@ -1,28 +1,30 @@
 @import "base.css";
-
+/* responsiveness with % and vw */
 /*NAV BAR*/
 <link rel="stylesheet" href="assets/CSS/base.css">
 
-/* Add a black background color to the top navigation */
-.topnav {
+/* blue background */
+.topnav
+{
   background-color: blue;
   overflow: auto;
   width: 100%;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a  {
+.topnav a
+{
    float: left;
    color: white;
    background-color: blue;
    display: block;
-   border-right: 1px solid white;
-   border-left: 1px solid white;
+   border-right: 0.052vw solid white;
+   border-left: 0.052vw solid white;
    text-align: center;
    text-decoration: none;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   font-size: 16px;
+   padding-top:  0.521vw;
+   padding-bottom: 0.521vw;
+   font-size: 0.84vw;
    width: 19.8%;
 }
 /*
@@ -35,20 +37,23 @@ ul li {
 }*/
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav a:hover
+{
   background-color: red;
   color: black;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+.topnav a.active
+{
   background-color: #4CAF50;
   color: red;
 }
-.galaxy {
+.galaxy
+{
      display: inline-block;
      vertical-align: top;
-     width: 50px;
-     height: 50px;
+     width: 2.60vw;
+     height: 2.60vw;
      float:left;
 }
