@@ -1,10 +1,45 @@
-let req = new XMLHttpRequest();
+let today = new Date();
+
+const date = today.getFullYear();
+const yearEnd = today.getFullYear();
 
 function submit() {
-  let title = document.getElementById("title").value;
-  let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
-  console.log(url);
-  getResponse(url);
+  const title = document.getElementById("title").value;
+  let yearEnd = document.getElementById("endYear").value;
+  let yearStart = document.getElementById("startYear").value;
+
+  if (yearEnd == "") {
+    yearEnd = date;
+  }
+  if (yearStart == "") {
+    yearStart = 1500;
+  }
+
+  if (yearEnd < yearStart || yearStart < 1 || yearEnd > date) {
+    alert("Error! Invalid data");
+  } else {
+    //let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
+
+    let newUrl = `https://images-api.nasa.gov/search?title=${title}&year_start=${yearStart}&year_end=${yearEnd}&media_type=image`;
+    getResponse(newUrl);
+  }
+}
+
+function populateYear(yearStart, yearEnd, dataElement) {
+  if (yearEnd < yearStart) {
+    alert("Error! The start date is later than the end");
+  } else {
+    try {
+      for (let i = yearEnd; i >= yearStart; i--) {
+        let option = document.createElement("option");
+        option.setAttribute("value", i);
+        dataElement.appendChild(option);
+        //yearStartElement.appendChild(option);
+      }
+    } catch {
+      alert("error");
+    }
+  }
 }
 
 async function getResponse(url) {
@@ -77,7 +112,6 @@ function popupImage(title, description, date, url) {
   const modalImg = document.getElementById("modal-img");
   const modalDate = document.getElementById("modal-date");
 
-  console.log("modal titel" + modalTitle);
   modalTitle.innerHTML = title;
   modalDescription.innerHTML = description;
   modalImg.setAttribute("src", url);
@@ -85,8 +119,12 @@ function popupImage(title, description, date, url) {
   modal.style.display = "block";
 }
 
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 span.onclick = function () {
   modal.style.display = "none";
 };
+
+const dataEl = document.getElementById("year");
+
+populateYear(1600, yearEnd, dataEl);
