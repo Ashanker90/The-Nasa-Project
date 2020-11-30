@@ -85,7 +85,7 @@
   overflow: hidden;
 }
 
-ul
+.list  ul
 {
   list-style-type: upper-roman;
   list-style-position: inside;
@@ -174,4 +174,12 @@ body
   background-color: black;
   background-size: cover;
   text-align: center;
+}
+
+
+
+@media (max-width: 858px){
+  .height2{
+    padding-top: 25%;
+  }
 }

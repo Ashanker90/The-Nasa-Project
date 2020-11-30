@@ -4,6 +4,7 @@
 width: 100% !important;
 }
 
+
 .about-title{
 text-align: center;
 color: blue;
@@ -55,4 +56,9 @@ input[type=text], select, textarea {
 /* When moving the mouse over the submit button, add a darker green color */
 .submit:hover {
   background-color: red;
+}
+@media (max-width: 858px){
+  .height2{
+    padding-top: 20%;
+  }
 }
