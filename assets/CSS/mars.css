@@ -45,6 +45,8 @@ body {
     /*sets the background to the image*/
     background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/pia23492.jpg");
     background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #wrapper {
     margin-left:auto;
