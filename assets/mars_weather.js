@@ -1,7 +1,10 @@
 let api_key = "9y3Tse8OLkkMvf3FEoY9Y17IcK2u33hWMhGg5ubR";
 let url = `https://api.nasa.gov/insight_weather/?api_key=${api_key}&feedtype=json&ver=1.0`;
 
-getMarsData().then(response => {
+getResponse(url);
+
+// getMarsData().then(response => {
+function createElements(response) {
     const length = response.sol_keys.length - 1;
     const sol = response.sol_keys[length];
 
@@ -57,18 +60,31 @@ getMarsData().then(response => {
     document.getElementById("atmospheric-pressure").textContent = "Atmospheric Pressure: " + AP;
 
     buildTable(response);
-})
+}
+// )
 
-async function getMarsData() {
+async function getResponse(url) {
     try {
-        const req = await fetch(url);
-        const res = await req.json();
-
-        return res;
-    } catch (error) {
-        alert("Error occurred while calling the Mars API. Please try again...");
+        await fetch(url)
+            .then((resp) => resp.json()) // Transform the data into json
+            .then(function (data) {
+                createElements(data);
+            });
+    } catch {
+        alert("TELL NASA TO CODE BETTER. THE API BROKE");
     }
 }
+
+// async function getMarsData() {
+//     try {
+//         const req = await fetch(url);
+//         const res = await req.json();
+//
+//         return res;
+//     } catch (error) {
+//         alert("Error occurred while calling the Mars API. Please try again...");
+//     }
+// }
 
 function buildTable(data) {
     const solKeys = data.sol_keys;
