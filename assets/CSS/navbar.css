@@ -112,6 +112,9 @@ toggle-button {
 }
 
 @media (max-width: 858px){
+  .columnOne{
+    margin-top: 60px;
+  }
   .checkbtn{
     display: block;
   }
@@ -123,16 +126,16 @@ toggle-button {
     background: #1058cc;
     height: 80px;
     width: 100%;
-    position: fixed;
+    
   }
   nav ul{
     float: right;
     margin-right: 20px;
   }
   ul{
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background: #2c3e50;
     top: 80px;
     left: -100%;
@@ -144,6 +147,16 @@ toggle-button {
     margin: 50px 0;
     line-height: 30px;
   }
+  #list {
+        position: relative;
+    /* width: 100%; */
+    height: auto;
+    background: #0000ff;
+    top: 0px;
+    left: 0%;
+    text-align: center;
+    transition: all .5s;
+}
   .topnav a{
     color: white;
     font-size: 16px;
@@ -179,9 +192,3 @@ toggle-button {
     box-sizing: border-box;
   }
 }
-@media (max-width: 768px){
-  /* nav{
-    margin-bottom: 500px;
-  } */
-      
-  }

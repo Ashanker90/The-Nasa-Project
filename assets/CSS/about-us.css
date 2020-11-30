@@ -97,16 +97,6 @@ input[type=text], select, textarea {
 }
 @media (max-width: 600px){
   .contact-Form{
-    margin-left: 50px;
+    margin-left: 70px;
   }
-  .submit{
-    margin-left: 50px;
-  }
-}
- /* Mobile Responsive setup  */
- @media (max-width: 768px){
-body{
-  overflow-x: hidden;
-}
-
 }

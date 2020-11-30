@@ -28,9 +28,7 @@ h2 {
     padding-left: 5%;
     text-align: left;
 }
-.sol-table {
-    margin-left: 3%;
-}
+
 .sol-table-body {
     background-color: transparent;
     color: white;
@@ -42,18 +40,38 @@ h2 {
     background:rgba(1,1,1,0.5);
 }
 body {
+    width: 100%;
     /*sets the background to the image*/
     background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/pia23492.jpg");
     background-color: black;
 }
 #wrapper {
+    width: 100%;
     margin-left:auto;
     margin-right:auto;
     width:100%;
 }
- /* Mobile Responsive setup  */
- /* @media (max-width: 768px){
-    .table{
-        overflow-x: visible; 
-    }
-    } */
+@media (max-width: 768px){
+
+ body {
+    width: 100% !important;
+    /*sets the background to the image*/
+    background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/pia23492.jpg");
+    background-color: black;
+}
+#wrapper {
+    width: 100% !important;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.sol-table {
+    border-collapse: collapse;
+ border-left: unset !important;
+}
+.sol-table-body-row {
+    color: white;
+    font-size: 70%;
+    background: rgba(1,1,1,0.5);
+}
+}

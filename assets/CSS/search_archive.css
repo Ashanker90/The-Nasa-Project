@@ -1,5 +1,6 @@
 @import "base.css";
 
+
 body {
   color: white;
   background-color: black;
@@ -172,15 +173,27 @@ input {
   column-count:         3;
   }
 }
-@media (max-width: 800px) {
-  #grid-container {
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
+
 @media (max-width: 400px) {
   #grid-container {
   -webkit-column-count: 1;
   column-count:         1;
   }
+.wrapper{
+width: 100% !important;
+}
+ .show_dates {
+    font-size: 14px !important;
+    margin: 0.5%;
+    padding: 5px;
+    font-family: 'nasalizationregular';
+    color: white;
+    background-color: black;
+    border: 0.5px solid white;
+    width: 15%;
+    height: 15%;
+    width: 50% !important;
+}
+}
+
 }
