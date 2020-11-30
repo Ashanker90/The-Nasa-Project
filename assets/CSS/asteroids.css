@@ -186,3 +186,7 @@ body
   background-size: cover;
   text-align: center;
 }
+/* logo position */
+.logo {
+  margin-left: -49.6%;
+}

@@ -3,57 +3,149 @@
 /*NAV BAR*/
 <link rel="stylesheet" href="assets/CSS/base.css">
 
+.topnav {
+  float:left;
+  position: absolute;
+}
+.topnav-links ul {
+  display: flex;
+
+}
+.topnav-links li {
+  list-style: none;
+}
+
 /* blue background */
-.topnav
+.topnav-links
 {
   background-color: blue;
   overflow: auto;
-  width: 100%;
+  width: 95%;
+  margin-left: 45px;
+  border-radius: 25px;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a
+.topnav-links li a
 {
+   padding: 7rem;
    float: left;
    color: white;
    background-color: blue;
    display: block;
-   border-right: 0.052vw solid white;
-   border-left: 0.052vw solid white;
-   text-align: center;
+   border-right: 0.0523vw solid white;
+   border-left: 0.0523vw solid white;
+   flex-direction: row;
    text-decoration: none;
-   padding-top:  0.521vw;
+   padding-top:  0.53vw;
    padding-bottom: 0.521vw;
    font-size: 0.84vw;
-   width: 19.8%;
+   width: 100%;
 }
-/*
-ul li {
-  margin-left: 9%;
-  display:inline-block !important;
-  padding: 10 16px;
-  text-align: center;
 
-}*/
 
 /* Change the color of links on hover */
-.topnav a:hover
+.topnav-links a:hover
 {
   background-color: red;
   color: black;
+  border-radius: 25px;
+  width: 39.5%;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active
+.topnav-links a.active
 {
   background-color: #4CAF50;
   color: red;
 }
-.galaxy
+.logo
 {
      display: inline-block;
-     vertical-align: top;
-     width: 2.60vw;
-     height: 2.60vw;
+     position: absolute;
+     width: 10%;
+     height: 17%;
      float:left;
+     margin-right: 20px;
+     margin-top: 15px;
+ }
+ .logo img {
+   width: 20%;
+   height: 27%;
+   float:left
+  }
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white !important;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .toggle-button{
+    display: flex;
+    margin-right: 94%;
+    margin-top: 10px;
+  }
+
+  .topnav-links{
+    display: none;
+    width: 93%;
+  }
+  .topnav{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topnav-links ul{
+    width: 100%;
+    flex-direction: column;
+  }
+  .topnav-links li{
+    text-align: center;
+  }
+
+  .topnav-links li a {
+    padding: .5rem 1rem;
+    width: 100%;
+    font-size: 1.5vw;
+    border-right: 0vw solid white;
+    border-left: 0vw solid white;
+    margin-left: -40px;
+  }
+
+  .topnav-links.active{
+    display: flex !important;
+  }
+  .topnav-links a:hover
+  {
+    background-color: red;
+    color: black;
+    border-radius: 25px;
+    width: 95%;
+    margin-left: -18px;
+  }
+
+  .logo
+  {
+       display: none;
+       position: absolute;
+       width: 10%;
+       height: 17%;
+       float:right !important;
+       margin-right: 20px;
+       margin-top: 15px;
+   }
+
 }

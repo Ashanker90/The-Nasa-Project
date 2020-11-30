@@ -184,3 +184,8 @@ input {
   column-count:         1;
   }
 }
+
+/* logo position */
+.logo {
+  margin-left: -49.6%;
+}
