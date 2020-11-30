@@ -100,3 +100,10 @@ input[type=text], select, textarea {
     margin-left: 70px;
   }
 }
+ /* Mobile Responsive setup  */
+ @media (max-width: 768px){
+body{
+  overflow-x: hidden;
+}
+    
+}

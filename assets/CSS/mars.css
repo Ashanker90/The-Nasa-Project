@@ -51,3 +51,9 @@ body {
     margin-right:auto;
     width:100%;
 }
+ /* Mobile Responsive setup  */
+ /* @media (max-width: 768px){
+    .table{
+        overflow-x: visible; 
+    }
+    } */

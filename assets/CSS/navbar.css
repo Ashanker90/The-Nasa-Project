@@ -36,11 +36,9 @@
    width: 19.4%;
    /* position: fixed; */
 }
-
 nav ul li{
   display: block;
 }
-
 
 /*
 ul li {
@@ -181,3 +179,9 @@ toggle-button {
     box-sizing: border-box;
   }
 }
+@media (max-width: 768px){
+  /* nav{
+    margin-bottom: 500px;
+  } */
+      
+  }

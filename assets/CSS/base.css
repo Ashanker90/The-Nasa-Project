@@ -28,3 +28,18 @@ h2 {
 .blue {
   color: #1058cc;
 }
+  /* Mobile Responsive setup  */
+  @media (max-width: 768px){
+    .height1{
+padding-top: 100px;
+    }
+.height2{
+  padding-top: 100px;
+}
+.page-header{
+  padding-top: 100px;
+}
+.about-us height2{
+  padding-top: 100px;
+}
+  }
