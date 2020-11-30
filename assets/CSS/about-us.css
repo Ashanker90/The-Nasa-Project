@@ -76,9 +76,15 @@ input[type=text], select, textarea {
   .contact-Form{
     margin-left: 80px;
   }
+  .submit{
+    margin-left: 100px;
+  }
 }
 @media (max-width: 1024px){
   .contact-Form{
+    margin-left: 100px;
+  }
+  .submit{
     margin-left: 100px;
   }
 }
