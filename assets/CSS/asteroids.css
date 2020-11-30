@@ -1,6 +1,6 @@
 @import "base.css";
 /* responsiveness with % and vw */
-h1
+.calendar_date
 {
   align-items: center;
   text-align: center;
@@ -12,10 +12,10 @@ h1
 
 .container
 {
-  display: inline-grid;
   width: 10%;
   justify-content: center;
   align-items: center;
+  margin: 1% auto;
 }
 
 .container .asteroidIcon
@@ -136,7 +136,7 @@ ul
 	  -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
 }
 
-.calander h1 span
+.calander span
 {
   font-size: 2.08vw;
   margin: 0vw;
@@ -171,7 +171,7 @@ ul
 	  -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
 }
 
-.calanderTwo h1 span
+.calanderTwo span
 {
   font-size: 2.08vw;
   margin: 0vw;
@@ -185,5 +185,4 @@ body
   background-color: black;
   background-size: cover;
   text-align: center;
-  overflow:hidden;
 }

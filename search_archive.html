@@ -5,37 +5,50 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="assets/CSS/base.css" />
     <link rel="stylesheet" href="assets/CSS/navbar.css" />
-
-    <title>Search</title>
     <link rel="stylesheet" href="assets/CSS/search_archive.css" />
 
+    <title>Search</title>
+
     <body>
-      <nav class="topnav" id="menuTopNav">
+      <div class="navbar">
+        <nav class="topnav" id="menuTopNav">
         <a href="index.html">Home </a>
         <a href="search_archive.html">NASA Library </a>
         <a href="weather_on_mars.html">Weather On Mars </a>
         <a href="asteroids.html">Asteroid NeoWs </a>
         <a href="about-us.html">About Us </a>
       </nav>
+      </div>
       <div>
-        <input type="text" id="title" placeholder="Search..">Search images(Optional)</input>
-        <br>
-        <input list="year" id="startYear" placeholder="Start Year" type = "number">Start Year</input>
-        <br>
-        <input list="year" id="endYear" placeholder="End Year" type = "number">End Year</input>
-        <br>
-        <datalist id="year"></datalist>
-        <button type="submit" onClick="submit()">Submit</button>
+        <h1>Nasa's Images Archive</h1>
+      </div>
+      <div class="input_fields">
+        <div class="search_div">
+          <input type="text" id="title" class="search_bar rounded" placeholder="Enter text here to search for images.."></input>
+        </div>
+        <div class="year_entries" id="year_entries" style="display:none">
+          <div>
+            <input list="year" id="startYear" class="year_input rounded" placeholder="Start Year" type = "number"></input>
+            <input list="year" id="endYear" class="year_input rounded" placeholder="End Year" type = "number"></input>
+          </div>
+          <datalist id="year"></datalist>
+        </div>
+        <div id="show_dates">
+          <button class="show_dates rounded" onClick="showDates()" style="cursor:pointer">Add Dates (Optional)</button>
+        </div>
+        <div>
+          <button type="submit" class="submit rounded" onClick="submit()" style="cursor:pointer">Submit</button>
+        </div>
       </div>
 
       <section id="grid-container"></section>
 
       <div id="modal" class="modal">
         <span class="close">&times;</span>
-        <h1 id="modal-title"></h1>
+        <h1 id="modal-title" class="blue"></h1>
         <img id="modal-img" />
         <p id="modal-description"></p>
-        <date id="modal-date"></date>
+        <date id="modal-date" class="red"></date>
       </div>
     </body>
     <script src="assets/search_archive.js"></script>
