@@ -11,12 +11,23 @@
 
   <body>
     <nav class="topnav" id="menuTopNav">
-
-        <a href="index.html">Home </a>
-        <a href="search_archive.html">NASA Library </a>
-        <a href="weather_on_mars.html">Weather On Mars </a>
-        <a href="asteroids.html">Asteroid NeoWs </a>
-        <a href="about-us.html">About Us </a>
+      <div class=logo>
+        <img src="galaxy.jpg" class=img width="500" height="600">
+      </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+          <div class=topnav-links>
+            <ul>
+              <li><a href="index.html">Home </a></li>
+              <li><a href="search_archive.html">NASA Library </a></li>
+              <li><a href="weather_on_mars.html">Weather On Mars </a></li>
+              <li><a href="asteroids.html">Asteroid NeoWs </a></li>
+              <li><a href="about-us.html">About Us </a></li>
+            <ul>
+          </div>
     </nav>
     <div>
       <input type="text" id="title" placeholder="Search.." />
@@ -33,6 +44,7 @@
       <date id="modal-date"></date>
     </div>
   </body>
+  <script src="./navbar.js"></script>
   <script src="assets/search_archive.js"></script>
 </head>
 </html>

@@ -187,3 +187,7 @@ body
   text-align: center;
   overflow:hidden;
 }
+/* logo position */
+.logo {
+  margin-left: -49.6%;
+}

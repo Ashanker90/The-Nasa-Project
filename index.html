@@ -1,41 +1,52 @@
-<link rel="stylesheet" href="assets/CSS/base.css" />
-<link rel="stylesheet" href="assets/CSS/index.css" />
-<head>
-  <meta charset = "utf-8">
-  <title> Homepage </title>
-  <link rel="stylesheet" href="assets/CSS/base.css">
-  <link rel="stylesheet" href="assets/CSS/navbar.css">
+<html>
+  <link rel="stylesheet" href="assets/CSS/base.css" />
+  <link rel="stylesheet" href="assets/CSS/index.css" />
+  <head>
+    <meta charset = "utf-8">
+    <title> Homepage </title>
+    <link rel="stylesheet" href="assets/CSS/base.css">
+    <link rel="stylesheet" href="assets/CSS/navbar.css">
 
-  <body>
-    <nav class="topnav" id="menuTopNav">
+    <body>
+      <nav class="topnav" id="menuTopNav">
+        <div class=logo>
+          <img src="galaxy.jpg" class=img width="500" height="600">
+        </div>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+            <div class=topnav-links>
+              <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="search_archive.html">NASA Library </a></li>
+                <li><a href="weather_on_mars.html">Weather On Mars </a></li>
+                <li><a href="asteroids.html">Asteroid NeoWs </a></li>
+                <li><a href="about-us.html">About Us </a></li>
+              <ul>
+            </div>
+      </nav>
 
-        <a href="index.html">Home </a>
-        <a href="search_archive.html">NASA Library </a>
-        <a href="weather_on_mars.html">Weather On Mars </a>
-        <a href="asteroids.html">Asteroid NeoWs </a>
-        <a href="about-us.html">About Us </a>
-    </nav>
+
+    <h1>Welcome to the Nasa Project</h1>
+    <p>
+      NASA offers various different ways to interact with their information. We
+      decided to make it easier. Enjoy.
+    </p>
+    <p>
+      Learn about weather on Mars, free images from NASA, asteroids near Earth,
+      and much more.
+    </p>
 
 
-
-  <h1>Welcome to the Nasa Project</h1>
-  <p>
-    NASA offers various different ways to interact with their information. We
-    decided to make it easier. Enjoy.
-  </p>
-  <p>
-    Learn about weather on Mars, free images from NASA, asteroids near Earth,
-    and much more.
-  </p>
-
-
-  <div id="content">
-    <embed
-      type="text/html"
-      src="image_of_the_day.html"
-      width="100%"
-      height="90%"
-    />
-  </div>
-</body>
-</head>
+      <div id="content">
+        <embed
+          type="text/html"
+          src="image_of_the_day.html"
+          width="100%"
+          height="90%"
+      </div>
+    </body>
+  </head>
+</html>

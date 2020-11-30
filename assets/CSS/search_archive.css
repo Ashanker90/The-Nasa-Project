@@ -13,7 +13,10 @@ h2 {
 h1 {
   color: #1058cc;
 }
-
+/* logo position */
+.logo {
+  margin-left: -49.6%;
+}
 /*Style the search box inside the navigation bar */
 .topnav input[type="text"] {
   float: right;
