@@ -68,10 +68,10 @@ function parseData(json) {
   let data = json["collection"]["items"];
   let index = 0;
 
-  if (count < 10) {
+  if (count < 100) {
     index = count;
   } else {
-    index = 10;
+    index = 100;
   }
 
   let i;
@@ -128,3 +128,15 @@ span.onclick = function () {
 const dataEl = document.getElementById("year");
 
 populateYear(1600, yearEnd, dataEl);
+
+function showDates() {
+  var yearDiv = document.getElementById("year_entries");
+  var addDates = document.getElementById("show_dates");
+  if (yearDiv.style.display === "none") {
+    yearDiv.style.display = "block";
+    addDates.style.display = "none";
+  } else {
+    yearDiv.style.display = "none";
+  }
+}
+

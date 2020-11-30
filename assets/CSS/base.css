@@ -4,8 +4,6 @@
     url('fonts/nasalization-free.regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
-
 }
 
 body {
@@ -13,4 +11,20 @@ body {
     background-color: black;
     color: #FFFFFF;
     line-height: normal;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: #1058cc;
+}
+
+.red{
+  color: red;
+}
+
+.blue {
+  color: #1058cc;
 }

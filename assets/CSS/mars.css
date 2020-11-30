@@ -5,6 +5,10 @@ table {
 td {
     padding: 4px;
 }
+
+h2 {
+  color: white;
+}
 .page-header {
     color: white;
     font-size: 140%;
