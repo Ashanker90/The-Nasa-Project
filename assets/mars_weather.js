@@ -131,11 +131,11 @@ function buildTable(data) {
 function toggleTemp(c_f) {
     if (c_f == 'F') {
         document.getElementById('temp-high-f').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-high-f').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-high-f').style = 'color: grey; cursor: text;';
         document.getElementById('tr-high-f').style = 'display: inline-list-item;';
 
         document.getElementById('temp-low-f').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-low-f').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-low-f').style = 'color: grey; cursor: text;';
         document.getElementById('tr-low-f').style = 'display: inline-list-item;';
 
         document.getElementById('temp-high-c').style = 'display: none;';
@@ -147,11 +147,11 @@ function toggleTemp(c_f) {
         document.getElementById('tr-low-c').style = 'display: none;';
     } else if (c_f = 'C') {
         document.getElementById('temp-high-c').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-high-c').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-high-c').style = 'color: grey; cursor: text;';
         document.getElementById('tr-high-c').style = 'display: inline-list-item;';
 
         document.getElementById('temp-low-c').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-low-c').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-low-c').style = 'color: grey; cursor: text;';
         document.getElementById('tr-low-c').style = 'display: inline-list-item;';
 
         document.getElementById('temp-high-f').style = 'display: none;';
