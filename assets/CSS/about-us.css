@@ -97,7 +97,10 @@ input[type=text], select, textarea {
 }
 @media (max-width: 600px){
   .contact-Form{
-    margin-left: 70px;
+    margin-left: 50px;
+  }
+  .submit{
+    margin-left: 50px;
   }
 }
  /* Mobile Responsive setup  */
@@ -105,5 +108,5 @@ input[type=text], select, textarea {
 body{
   overflow-x: hidden;
 }
-    
+
 }

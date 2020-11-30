@@ -123,14 +123,14 @@ toggle-button {
     background: #1058cc;
     height: 80px;
     width: 100%;
-    
+    position: fixed;
   }
   nav ul{
     float: right;
     margin-right: 20px;
   }
   ul{
-   
+    position: fixed;
     width: 100%;
     height: 100vh;
     background: #2c3e50;
@@ -179,3 +179,9 @@ toggle-button {
     box-sizing: border-box;
   }
 }
+@media (max-width: 768px){
+  /* nav{
+    margin-bottom: 500px;
+  } */
+      
+  }
