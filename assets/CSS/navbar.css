@@ -4,8 +4,7 @@
 <link rel="stylesheet" href="assets/CSS/base.css">
 
 /* blue background */
-.topnav
-{
+.topnav {
   background-color: #1058cc;
   overflow: auto;
   width: 100%;
@@ -19,23 +18,22 @@
   box-sizing: border-box;
 } */
 /* Style the links inside the navigation bar */
-.topnav a
-{
-   float: left;
-   color: white;
-   background-color: #1058cc;
-   display: block;
-   border-right: 0.052vw solid white;
-   border-left: 0.052vw solid white;
-   text-align: center;
-   text-decoration: none;
-   padding-top:  1.5vw;
-   padding-bottom: 1.5vw;
-   font-size: 0.84vw;
-   width: 19.4%;
-   /* position: fixed; */
+.topnav a {
+  float: left;
+  color: white;
+  background-color: #1058cc;
+  display: block;
+  border-right: 0.052vw solid white;
+  border-left: 0.052vw solid white;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+  font-size: 0.84vw;
+  width: 19.4%;
+  /* position: fixed; */
 }
-nav ul li{
+nav ul li {
   display: block;
 }
 
@@ -49,30 +47,27 @@ ul li {
 }*/
 
 /* Change the color of links on hover */
-.topnav a:hover
-{
+.topnav a:hover {
   background-color: red;
   color: black;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active
-{
-  background-color: #4CAF50;
+.topnav a.active {
+  background-color: #4caf50;
   color: red;
 }
-.galaxy
-{
-     display: inline-block;
-     vertical-align: top;
-     width: 2.60vw;
-     height: 2.60vw;
-     float:left;
+.galaxy {
+  display: inline-block;
+  vertical-align: top;
+  width: 2.6vw;
+  height: 2.6vw;
+  float: left;
 }
 
 toggle-button {
   position: absolute;
-  top: .75rem;
+  top: 0.75rem;
   right: 1rem;
   display: none;
   flex-direction: column;
@@ -87,8 +82,7 @@ toggle-button {
   border-radius: 10px;
 }
 
-
-.checkbtn{
+.checkbtn {
   font-size: 30px;
   color: white;
   float: right;
@@ -99,39 +93,37 @@ toggle-button {
   display: none;
   margin-top: 3%;
 }
-#check{
+#check {
   display: none;
 }
 
-@media (max-width: 952px){
-
-  .topnav a{
+@media (max-width: 952px) {
+  .topnav a {
     font-size: 16px;
   }
 }
 
-@media (max-width: 858px){
-  .columnOne{
+@media (max-width: 858px) {
+  .columnOne {
     margin-top: 60px;
   }
-  .checkbtn{
+  .checkbtn {
     display: block;
   }
-  nav ul{
+  nav ul {
     float: right;
     margin-right: 20px;
   }
-  nav{
+  nav {
     background: #1058cc;
     height: 80px;
     width: 100%;
-
   }
-  nav ul{
+  nav ul {
     float: right;
     margin-right: 20px;
   }
-  ul{
+  ul {
     position: absolute;
     width: 100%;
     height: auto;
@@ -139,54 +131,54 @@ toggle-button {
     top: 80px;
     left: -100%;
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
   }
-  nav ul li{
+  nav ul li {
     display: block;
     margin: 50px 0;
     line-height: 30px;
   }
   #list {
-        position: relative;
+    position: relative;
     /* width: 100%; */
     height: auto;
     background: #0000ff;
     top: 0px;
     left: 0%;
     text-align: center;
-    transition: all .5s;
-}
-  .topnav a{
+    transition: all 0.5s;
+  }
+  .topnav a {
     color: white;
     font-size: 16px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
     float: left;
-   /* color: white; */
-   background-color: #1058cc;
-   display: contents;
-   border-right: 0vw solid white;
-   border-left: 0vw solid white;
-   text-align: none;
-   text-decoration: none;
-   padding-top:  1vw;
-   padding-bottom: 1vw;
-   /* font-size: 0.84vw; */
-   width: 19.8%;
-
+    /* color: white; */
+    background-color: #1058cc;
+    display: contents;
+    border-right: 0vw solid white;
+    border-left: 0vw solid white;
+    text-align: none;
+    text-decoration: none;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    /* font-size: 0.84vw; */
+    width: 19.8%;
   }
-  a:hover,a.active{
+  a:hover,
+  a.active {
     background: none;
     color: #0082e6;
   }
-  #check:checked ~ ul{
+  #check:checked ~ ul {
     left: 0;
   }
-  *{
+  * {
     padding: 0;
     margin: 0;
-    text-decoration: none;
+    /* text-decoration: none; */
     list-style: none;
     box-sizing: border-box;
   }
