@@ -170,6 +170,25 @@ input {
     -webkit-column-count: 3;
     column-count: 3;
   }
+  .search_bar {
+  margin: 0.5%;
+  width: 70%;
+  height: 5vw;
+  padding: 1%;
+  border: 0.5px solid red;
+  color: white;
+ }
+ .show_dates {
+  font-size: 14px !important;
+  margin: 0.5%;
+  padding: 5px;
+  font-family: "nasalizationregular";
+  color: white;
+  background-color: black;
+  border: 0.5px solid white;
+  height: 10%;
+  width: 50% !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -188,8 +207,25 @@ input {
     color: white;
     background-color: black;
     border: 0.5px solid white;
-    width: 15%;
     height: 15%;
     width: 50% !important;
+  }
+  .search_bar {
+    margin: 0.5%;
+    width: 100%;
+    height: 10vw;
+    padding: 1%;
+    border: 0.5px solid red;
+    color: white;
+  }
+  .year_input {
+    margin: 1%;
+    padding: 0.5%;
+    font-family: "nasalizationregular";
+    color: white;
+    background-color: black;
+    border: 0.5px solid white;
+    width: 40%;
+    height: 10vw;
   }
 }
