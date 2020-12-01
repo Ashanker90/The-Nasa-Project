@@ -1,7 +1,6 @@
 @import "base.css";
 /* responsiveness with % and vw */
-.calendar_date
-{
+.calendar_date {
   align-items: center;
   text-align: center;
   font-size: 1.04vw;
@@ -9,27 +8,23 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.container
-{
+.container {
   width: 10%;
   justify-content: center;
   align-items: center;
   margin: 1% auto;
 }
 
-.container .asteroidIcon
-{
+.container .asteroidIcon {
   width: 20%;
   display: inline;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0.35vw;
-  overflow:hidden;
+  overflow: hidden;
 }
 
-.container .asteroidIcon path
-{
+.container .asteroidIcon path {
   fill: transparent;
   stroke-width: 10;
   stroke: #ffa500;
@@ -37,35 +32,28 @@
   stroke-dashoffset: 0;
 }
 
-.container .asteroidIcon:hover path
-{
+.container .asteroidIcon:hover path {
   animation: animate-asteroid 2s linear forwards;
 }
 
-@keyframes animate-asteroid
-{
-  0%
-  {
+@keyframes animate-asteroid {
+  0% {
     stroke-dashoffset: 0;
   }
-  40%
-  {
+  40% {
     stroke-dashoffset: 1600;
   }
-  80%
-  {
+  80% {
     stroke-dashoffset: 3200;
-    fill: 	#ff4500;
+    fill: #ff4500;
   }
-  100%
-  {
+  100% {
     stroke-dashoffset: 3200;
     fill: #ffff99;
   }
 }
 
-.row div
-{
+.row div {
   flex: 50%;
   align-content: center;
   margin-left: auto;
@@ -73,8 +61,7 @@
   padding-bottom: 0.52vw;
 }
 
-.asteroidsgif img
-{
+.asteroidsgif img {
   display: flex;
   border-radius: 50%;
   border: 0.16vw solid white;
@@ -85,8 +72,7 @@
   overflow: hidden;
 }
 
-ul
-{
+.list ul {
   list-style-type: upper-roman;
   list-style-position: inside;
   padding-right: 0.26vw;
@@ -99,79 +85,74 @@ ul
   padding: 0.26vw;
 }
 
-.calander
-{
+.calander {
   width: 10%;
-	background: #dcdcdc;
-	background: linear-gradient(top, #dcdcdc 0%,#696969 100%);
-	background: -moz-linear-gradient(top, #dcdcdc 0%, #696969 100%);
-	background: -webkit-linear-gradient(top, #dcdcdc 0%, #696969 100%);
+  background: #dcdcdc;
+  background: linear-gradient(top, #dcdcdc 0%, #696969 100%);
+  background: -moz-linear-gradient(top, #dcdcdc 0%, #696969 100%);
+  background: -webkit-linear-gradient(top, #dcdcdc 0%, #696969 100%);
   border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
   -moz-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
   -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
 }
 
-.calander p span
-{
-    background: #0000ff;
-    background: linear-gradient(top, #0000ff 0%, #1f1fff 100%);
-    background: -moz-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
-	  background: -webkit-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
-    font-size: 1.56vw;
-    font-weight: bold;
-    text-align: center;
-    display: block;
-	  border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
-	  -moz-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
-	  -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
-}
-
-.calander span
-{
-  font-size: 2.08vw;
-  margin: 0vw;
-  padding: 0vw;
-}
-
-.calanderTwo
-{
-  width: 10%;
-	background: #dcdcdc;
-	background: linear-gradient(top, #dcdcdc 0%, #696969 100%);
-	background: -moz-linear-gradient(top, #dcdcdc 0%, #696969 100%);
-	background: -webkit-linear-gradient(top, #dcdcdc 0%, #696969 100%);
+.calander p span {
+  background: #0000ff;
+  background: linear-gradient(top, #0000ff 0%, #1f1fff 100%);
+  background: -moz-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
+  background: -webkit-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
+  font-size: 1.56vw;
+  font-weight: bold;
+  text-align: center;
+  display: block;
   border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
   -moz-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
   -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
 }
 
-.calanderTwo p span
-{
-    background: #0000ff;
-    background: linear-gradient(top, #0000ff 0%, #1f1fff 100%);
-    background: -moz-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
-	  background: -webkit-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
-    font-size: 1.56vw;
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
-	  -moz-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
-	  -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
-}
-
-.calanderTwo span
-{
+.calander span {
   font-size: 2.08vw;
   margin: 0vw;
   padding: 0vw;
 }
 
-body
-{
+.calanderTwo {
+  width: 10%;
+  background: #dcdcdc;
+  background: linear-gradient(top, #dcdcdc 0%, #696969 100%);
+  background: -moz-linear-gradient(top, #dcdcdc 0%, #696969 100%);
+  background: -webkit-linear-gradient(top, #dcdcdc 0%, #696969 100%);
+  border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
+  -moz-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
+  -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
+}
+
+.calanderTwo p span {
+  background: #0000ff;
+  background: linear-gradient(top, #0000ff 0%, #1f1fff 100%);
+  background: -moz-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
+  background: -webkit-linear-gradient(top, #0000ff 0%, #1f1fff 100%);
+  font-size: 1.56vw;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
+  -moz-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
+  -webkit-border-radius: 0.26vw 0.26vw 0.26vw 0.26vw;
+}
+
+.calanderTwo span {
+  font-size: 2.08vw;
+  margin: 0vw;
+  padding: 0vw;
+}
+
+body {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/asteroid20161103-16_3.jpg");
   background-repeat: no-repeat;
   background-color: black;
   background-size: cover;
   text-align: center;
 }
+
+

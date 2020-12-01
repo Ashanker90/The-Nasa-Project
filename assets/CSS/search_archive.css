@@ -3,10 +3,7 @@
 body {
   color: white;
   text-align: center;
-  background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-repeat: no-repeat;
   background-color: black;
-  background-size: cover;
 }
 
 .input_fields {
@@ -16,9 +13,8 @@ body {
 input {
   color: white;
   background-color: black;
-  font-family: 'nasalizationregular';
+  font-family: "nasalizationregular";
 }
-
 .rounded {
   border-radius: 25px;
   width: 200px;
@@ -37,7 +33,7 @@ input {
 .submit {
   margin: 0.5%;
   padding: 1%;
-  font-family: 'nasalizationregular';
+  font-family: "nasalizationregular";
   color: white;
   background-color: black;
   border: 0.5px solid blue;
@@ -47,7 +43,7 @@ input {
 .show_dates {
   margin: 0.5%;
   padding: 5px;
-  font-family: 'nasalizationregular';
+  font-family: "nasalizationregular";
   color: white;
   background-color: black;
   border: 0.5px solid white;
@@ -62,7 +58,7 @@ input {
 .year_input {
   margin: 1%;
   padding: 0.5%;
-  font-family: 'nasalizationregular';
+  font-family: "nasalizationregular";
   color: white;
   background-color: black;
   border: 0.5px solid white;
@@ -149,12 +145,12 @@ input {
 }
 
 #grid-container {
-   /* Prevent vertical gaps */
-   line-height: 0;
-   -webkit-column-count: 5;
-   -webkit-column-gap:   0px;
-   column-count:         5;
-   column-gap:           0px;
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 0px;
+  column-count: 5;
+  column-gap: 0px;
 }
 
 #grid-container img {
@@ -165,25 +161,35 @@ input {
 
 @media (max-width: 1200px) {
   #grid-container {
-  -webkit-column-count: 4;
-  column-count:         4;
+    -webkit-column-count: 4;
+    column-count: 4;
   }
 }
 @media (max-width: 1000px) {
   #grid-container {
-  -webkit-column-count: 3;
-  column-count:         3;
+    -webkit-column-count: 3;
+    column-count: 3;
   }
 }
-@media (max-width: 800px) {
-  #grid-container {
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
+
 @media (max-width: 400px) {
   #grid-container {
-  -webkit-column-count: 1;
-  column-count:         1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+  .wrapper {
+    width: 100% !important;
+  }
+  .show_dates {
+    font-size: 14px !important;
+    margin: 0.5%;
+    padding: 5px;
+    font-family: "nasalizationregular";
+    color: white;
+    background-color: black;
+    border: 0.5px solid white;
+    width: 15%;
+    height: 15%;
+    width: 50% !important;
   }
 }
