@@ -1,7 +1,7 @@
 body {
   color: white;
-  background-color: black;
   text-align: center;
+  background-color: black;
 }
 
 h2 {
@@ -10,4 +10,12 @@ h2 {
 
 h1 {
   color: #1058cc;
+}
+@media (max-width: 858px){
+.height2{
+  padding-top: 25%;
+}
+.height1{
+  padding-top: 10%;
+}
 }

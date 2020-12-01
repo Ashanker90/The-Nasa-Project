@@ -5,22 +5,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset = "utf-8">
     <!--responsiveness below-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Asteroids! </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/CSS/base.css">
     <link rel="stylesheet" href="assets/CSS/navbar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="assets/CSS/asteroids.css" />
-
     <body>
-      <nav class="topnav" id="menuTopNav">
-        <a href="index.html">Home </a>
-        <a href="search_archive.html">NASA Library </a>
-        <a href="weather_on_mars.html">Weather On Mars </a>
-        <a href="asteroids.html">Asteroid NeoWs </a>
-        <a href="about-us.html">About Us </a>
-      </nav>
-
-      <h1>Asteroids: Near Earth Objects!</h1>
+        <!-- <div w3-include-html="navbar.html"></div> -->
+        <nav class="topnav" id="menuTopNav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li> <a href="index.html">Home </a></li>
+                <li><a href="search_archive.html">NASA Library </a></li>
+                <li><a href="weather_on_mars.html">Weather On Mars </a></li>
+                <li> <a href="asteroids.html">Asteroid NeoWs </a></li>
+                <li><a href="about-us.html">About Us </a></li>
+            </ul>
+        </nav>
+      <h1 class="height2">Asteroids: Near Earth Objects!</h1>
       <div class="container">
         <!--used this link for help on animating https://www.youtube.com/watch?v=0cYdA4MBwhk-->
           <div class="asteroidIcon">
@@ -30,7 +36,7 @@
           </div>
       </div>
       <div class="row">
-        <div class="columnOne" style="background-color: #838383;">
+        <div class="columnOne">
           <!--the line below shows the current date of the user's device-->
           <p>Today's date is </p>
           <!--  <span id="start_date"></span>-->
@@ -48,8 +54,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="columnOne" style="background-color: #8b0000;">
-          <p>The asteroids near Earth are </p><ul id="list"></ul></p>
+        <div  class="columnOne">
+          <p>The asteroids near Earth are </p>
+          <div  class="list">
+            <ul style = "background-color: #696969" id="list"></ul></p>
         </div>
       </div>
       </div>

@@ -1,7 +1,10 @@
 let api_key = "9y3Tse8OLkkMvf3FEoY9Y17IcK2u33hWMhGg5ubR";
 let url = `https://api.nasa.gov/insight_weather/?api_key=${api_key}&feedtype=json&ver=1.0`;
 
-getMarsData().then(response => {
+getResponse(url);
+
+// getMarsData().then(response => {
+function createElements(response) {
     const length = response.sol_keys.length - 1;
     const sol = response.sol_keys[length];
 
@@ -57,18 +60,31 @@ getMarsData().then(response => {
     document.getElementById("atmospheric-pressure").textContent = "Atmospheric Pressure: " + AP;
 
     buildTable(response);
-})
+}
+// )
 
-async function getMarsData() {
+async function getResponse(url) {
     try {
-        const req = await fetch(url);
-        const res = await req.json();
-
-        return res;
-    } catch (error) {
-        alert("Error occurred while calling the Mars API. Please try again...");
+        await fetch(url)
+            .then((resp) => resp.json()) // Transform the data into json
+            .then(function (data) {
+                createElements(data);
+            });
+    } catch {
+        alert("TELL NASA TO CODE BETTER. THE API BROKE");
     }
 }
+
+// async function getMarsData() {
+//     try {
+//         const req = await fetch(url);
+//         const res = await req.json();
+//
+//         return res;
+//     } catch (error) {
+//         alert("Error occurred while calling the Mars API. Please try again...");
+//     }
+// }
 
 function buildTable(data) {
     const solKeys = data.sol_keys;
@@ -115,11 +131,11 @@ function buildTable(data) {
 function toggleTemp(c_f) {
     if (c_f == 'F') {
         document.getElementById('temp-high-f').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-high-f').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-high-f').style = 'color: grey; cursor: text;';
         document.getElementById('tr-high-f').style = 'display: inline-list-item;';
 
         document.getElementById('temp-low-f').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-low-f').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-low-f').style = 'color: grey; cursor: text;';
         document.getElementById('tr-low-f').style = 'display: inline-list-item;';
 
         document.getElementById('temp-high-c').style = 'display: none;';
@@ -131,11 +147,11 @@ function toggleTemp(c_f) {
         document.getElementById('tr-low-c').style = 'display: none;';
     } else if (c_f = 'C') {
         document.getElementById('temp-high-c').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-high-c').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-high-c').style = 'color: grey; cursor: text;';
         document.getElementById('tr-high-c').style = 'display: inline-list-item;';
 
         document.getElementById('temp-low-c').style = 'display: inline-block;';
-        document.getElementById('lbl-temp-low-c').style = 'color: #dddddd; cursor: text;';
+        document.getElementById('lbl-temp-low-c').style = 'color: grey; cursor: text;';
         document.getElementById('tr-low-c').style = 'display: inline-list-item;';
 
         document.getElementById('temp-high-f').style = 'display: none;';
