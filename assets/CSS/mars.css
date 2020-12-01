@@ -41,8 +41,10 @@ h2 {
 body {
     width: 100%;
     /*sets the background to the image*/
-    background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/pia23492.jpg");
+    background-image: url("../images/mars_2.jpg");
     background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #wrapper {
     width: 100%;
