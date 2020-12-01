@@ -24,7 +24,7 @@ input {
 .search_bar {
   margin: 0.5%;
   width: 50%;
-  height: 15% !important;
+  height: 3vw;
   padding: 1%;
   border: 0.5px solid red;
   color: white;
@@ -48,7 +48,7 @@ input {
   background-color: black;
   border: 0.5px solid white;
   width: 15%;
-  height: 15%;
+  height: 3vw;
 }
 
 .year_entries {
@@ -63,7 +63,7 @@ input {
   background-color: black;
   border: 0.5px solid white;
   width: 15%;
-  height: 15%;
+  height: 3vw;
 }
 
 /* Style the Image Used to Trigger the Modal */
