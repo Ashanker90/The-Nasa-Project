@@ -1,17 +1,16 @@
 @font-face {
-    font-family: 'nasalizationregular';
-    src: url('fonts/nasalization-free.regular-webfont.woff2') format('woff2'),
-    url('fonts/nasalization-free.regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "nasalizationregular";
+  src: url("fonts/nasalization-free.regular-webfont.woff2") format("woff2"),
+    url("fonts/nasalization-free.regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-
-    font-family: 'nasalizationregular';
-    background-color: black;
-    color: #FFFFFF;
-    line-height: normal;
+  font-family: "nasalizationregular";
+  background-color: black;
+  color: #ffffff;
+  line-height: normal;
 }
 h1 {
   color: white;
@@ -21,10 +20,26 @@ h2 {
   color: #1058cc;
 }
 
-.red{
+.red {
   color: red;
 }
 
 .blue {
   color: #1058cc;
+}
+
+.submit {
+  /* margin: 0.5%; */
+  padding: 1%;
+  font-family: "nasalizationregular";
+  color: white;
+  background-color: black;
+  border: 0.5px solid blue;
+  width: 30%;
+}
+
+.rounded {
+  border-radius: 25px;
+  width: 200px;
+  outline: none;
 }

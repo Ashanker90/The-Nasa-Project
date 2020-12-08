@@ -1,44 +1,46 @@
 /* About us page */
 
-.wrapper{
-width: 100% !important;
+.wrapper {
+  width: 100% !important;
 }
-.about-title{
-text-align: center;
-color: #1058cc;
-padding-top: 50px;
+.about-title {
+  text-align: center;
+  color: #1058cc;
+  padding-top: 50px;
 }
 .about-us {
   margin-top: 0px !important;
   text-align: center;
 }
-.text-help{
+.text-help {
   text-align: center;
   color: red;
 }
 .height2 h2 {
-  color:white;
+  color: white;
 }
 .help {
-  margin-top:50px;
+  margin-top: 50px;
   padding: 20 20px;
 }
 .contact-Form {
-    margin-top: 50px;
-    width: 75%;
-    margin-left: 220px;
+  margin-top: 50px;
+  width: 75%;
+  margin-left: 220px;
 }
-.name-contact{
-  font-family: 'nasalizationregular';
+.name-contact {
+  font-family: "nasalizationregular";
 }
-.email-contact{
-  font-family: 'nasalizationregular';
+.email-contact {
+  font-family: "nasalizationregular";
 }
-.message-contact{
-  font-family: 'nasalizationregular';
+.message-contact {
+  font-family: "nasalizationregular";
 }
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
@@ -46,56 +48,56 @@ input[type=text], select, textarea {
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
 .submit {
-  background-color: #1058cc;
+  /* background-color: #1058cc;
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 4px; */
+
   margin-left: 220px;
-  font-family: 'nasalizationregular';
+  /* font-family: 'nasalizationregular'; */
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-.submit:hover {
+/* .submit:hover {
   background-color: red;
-}
+} */
 
-@media (max-width: 858px){
-  .height2{
+@media (max-width: 858px) {
+  .height2 {
     padding-top: 5%;
   }
-  .contact-Form{
+  .contact-Form {
     margin-left: 80px;
   }
-  .submit{
-    font-family: 'nasalizationregular';
+  .submit {
+    font-family: "nasalizationregular";
     margin-left: 100px;
   }
-  .about-title{
+  .about-title {
     padding-top: 0px;
   }
 }
-@media (max-width: 1024px){
-  .height2{
+@media (max-width: 1024px) {
+  .height2 {
     padding-top: 10%;
   }
-  .contact-Form{
+  .contact-Form {
     margin-left: 100px;
   }
 
-  .submit{
-    font-family: 'nasalizationregular';
+  .submit {
+    font-family: "nasalizationregular";
     margin-left: 100px;
   }
 }
-@media (max-width: 600px){
-  .contact-Form{
+@media (max-width: 600px) {
+  .contact-Form {
     margin-left: 70px;
   }
 }
