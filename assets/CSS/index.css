@@ -23,7 +23,8 @@ h1 {
   }
 }
 
-#pic {
+#pic,
+#video {
   height: 95%;
   width: auto;
 }
