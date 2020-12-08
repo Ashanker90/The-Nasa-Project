@@ -15,11 +15,7 @@ input {
   background-color: black;
   font-family: "nasalizationregular";
 }
-.rounded {
-  border-radius: 25px;
-  width: 200px;
-  outline: none;
-}
+
 
 .search_bar {
   margin: 0.5%;
@@ -30,15 +26,7 @@ input {
   color: white;
 }
 
-.submit {
-  margin: 0.5%;
-  padding: 1%;
-  font-family: "nasalizationregular";
-  color: white;
-  background-color: black;
-  border: 0.5px solid blue;
-  width: 30%;
-}
+
 
 .show_dates {
   margin: 0.5%;
