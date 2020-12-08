@@ -1,7 +1,6 @@
 let api_key = "wGXhi7fLKdBmDP5PdNR5Eu3N4JOvJ9lez2UnnqwJ";
 
 let today = new Date();
-//let start_date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 
 let start_date = today
   .toLocaleString("en-us", {
@@ -25,8 +24,7 @@ let months = [
   "Dec.",
 ];
 let monthWord = months[today.getMonth()];
-//let start_month = today.toLocaleString('en-us', { month: '2-digit' });
-// let date = start_date.toString();
+
 //makes a second object date
 let second = new Date();
 //finds the seven days before
@@ -51,11 +49,6 @@ async function getResponse(url) {
 }
 
 function createElements(response) {
-  //let length = response.near_earth_objects.length - 1;
-  //the line below gets the current date of the device
-  //document.getElementById("start_date").innerHTML = today;
-  // document.getElementById("second").innerHTML = second;
-  //  document.getElementById("start_month").innerHTML = (today.getMonth() + 1);
   document.getElementById("start_month").innerHTML = monthWord;
   document.getElementById("start_day").innerHTML = today.getDate();
   document.getElementById("end_month").innerHTML = monthSec;
@@ -70,12 +63,9 @@ function createElements(response) {
   } else {
     try {
       for (var i = 0; i < asteroids.length; i++) {
-        // asteroids.push(response);
         createListItem(asteroids[i].name);
-        // var obj = asteroids[todayDate][i];
 
         var name = asteroids[i].name;
-        //alert("NAME: " + name);
       }
     } catch (err) {
       console.log("Caught error" + err);

@@ -16,7 +16,6 @@ input {
   font-family: "nasalizationregular";
 }
 
-
 .search_bar {
   margin: 0.5%;
   width: 50%;
@@ -25,8 +24,6 @@ input {
   border: 0.5px solid red;
   color: white;
 }
-
-
 
 .show_dates {
   margin: 0.5%;
@@ -149,7 +146,7 @@ input {
 
 @media (max-width: 1200px) {
   #grid-container {
-    -webkit-column-count: 4;
+    -webkit-column-count: 4; /*was 4 */
     column-count: 4;
   }
 }

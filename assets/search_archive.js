@@ -18,8 +18,6 @@ function submit() {
   if (yearEnd < yearStart || yearStart < 1 || yearEnd > date) {
     alert("Error! Invalid data");
   } else {
-    //let url = `https://images-api.nasa.gov/search?title=${title}&media_type=image`;
-
     let newUrl = `https://images-api.nasa.gov/search?title=${title}&year_start=${yearStart}&year_end=${yearEnd}&media_type=image`;
     getResponse(newUrl);
   }
@@ -34,7 +32,6 @@ function populateYear(yearStart, yearEnd, dataElement) {
         let option = document.createElement("option");
         option.setAttribute("value", i);
         dataElement.appendChild(option);
-        //yearStartElement.appendChild(option);
       }
     } catch {
       alert("error");
@@ -130,8 +127,8 @@ const dataEl = document.getElementById("year");
 populateYear(1600, yearEnd, dataEl);
 
 function showDates() {
-  var yearDiv = document.getElementById("year_entries");
-  var addDates = document.getElementById("show_dates");
+  let yearDiv = document.getElementById("year_entries");
+  let addDates = document.getElementById("show_dates");
   if (yearDiv.style.display === "none") {
     yearDiv.style.display = "block";
     addDates.style.display = "none";
@@ -139,4 +136,3 @@ function showDates() {
     yearDiv.style.display = "none";
   }
 }
-
